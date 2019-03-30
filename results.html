@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MF7334J');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LinkMentalHealth</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">  <!-- TODO: Update Font Awesome for rest of template-->
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/results.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Vue.js production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        .vh-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .therapist-img {
+            max-width: 25%;
+            min-width: 25%;
+        }
+        .therapist-details{
+            max-width: 75%;
+            min-width: 75%;
+        }
+        .therapist-details > p{
+            margin: 0;
+            font-size: .9em;
+        }
+        .therapist-postal{
+            margin-right: .5rem;
+        }
+        /* for screens bigger than bootstrap sm */
+        @media (max-width: 992px) {
+            .therapist-img {
+                max-width: 35%;
+                min-width: 35%;
+            }
+            .therapist-details{
+                max-width: 65%;
+                min-width: 65%;
+            }
+            .therapist-summary{
+                display: none;
+            }
+            .name-center{
+                text-align: center;
+            }
+            .hide-overflow{
+                white-space: nowrap;
+                width: 195px;
+                overflow: hidden;
+                text-overflow: clip;
+            }
+            .control-overflow{
+                white-space: wrap;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: clip;
+            }
+            .travel-icons{
+                display: block;
+                margin-left: -3px;
+            }
+            .therapist-postal{
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF7334J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <nav class="navbar navbar-expand-lg navbar-light grey lighten-5">
+        <a class="navbar-brand" href="https://linkmentalhealth.com">
+            <img src="img/logo.png" height="45px;" alt="LinkMentalHealth logo;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <span class="navbar-text">
+                <button class="btn btn-sm btn-outline-elegant" onclick="window.location.href='https://linkmentalhealth.com'">Back Home</button>
+                <button class="btn btn-sm btn-elegant" onclick="window.location='therapists.html'"><a style="color:white;" href="therapists.html">FOR THERAPISTS</a></button>
+            </span>
+        </div>
+    </nav>
+    <main class="container">
+        <!-- search results -->
+        <div class="row">
+            <h3 class="pt-4 col-md-12" style="font-size:16pt;">Matched Therapists For You</h3>
+        </div>
+        <!--TODO: edit style-->
+        <div class="row pt-2">
+            <div class="col-md-8">
+                <p style="font-size: 14pt;">
+                    These therapists are recommended for you based on indicators that prove to give you better results.
+                    <br> This includes treatment type, severity, religion and language.
+                </p>
+            </div>
+            <div id="funding" class="col-md-4 col-xs-10 vh-center" style="background-color: #66A5D7; color: white; max-width: 80%; margin: 0 auto;">
+                <h3>
+                    <!--Funding Here-->
+                </h3>
+            </div>
+        </div>
+
+        <div class="container col-sm-10 col-sm-offset-1">
+            <div class="row mt-4" id="therapist-table-tr" style="text-transform: none">
+                <!--Therapists populate here-->
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <footer class="page-footer row font-small pt-4" style="color: #9da3b3; ">
+
+        <!--Footer Links-->
+        <div class="col-12 text-center text-md-left" style="background-color: white;">
+            <div class="row justify-content-center" href="#">
+                <div class="col text-center pb-4">
+                    <div class="col-12 text-center text-md-left" style="background-color: white;">
+                        <div class="col-12 text-center text-md-left" style="background-color: white;">
+                            <div class="row justify-content-center" href="#">
+                                <div class="col text-center pb-4">
+                                    <h1 class="h1 font-weight-bold text-center pt-4" style="color: black;padding-bottom: 15px;">Our Partners</h1>
+                                    <img src="images/partners.svg" class="column" style="padding-top: 30px;" alt="communitech partnership with linkmentalhealth">
+                                    <img src="images/Vaughan.jpg" class="column" style="width: 300px;" alt="Vaughan partnership with linkmentalhealth">
+                                    <img src="images/iMD_Health_Blue_website.jpg" class="column" style="width: 175px;" alt="iMD partnership with linkmentalhealth">
+                                    <img src="images/ICUBE.jpg" class="column" style="width: 175px;" alt="ICUBE partnership with linkmentalhealth">
+                                    <img src="images/RIC.jpg" style="width: 226px;" alt="RIC partnership with linkmentalhealth">
+                                    <img src="images/rising-youth.png" style="width: 700px;max-width:100%;" alt="Rising Youth partnership with linkmentalhealth">
+                                    <h4>We Are Proud to be Part of Communitech’s Strategic Growth Program</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row footer">
+
+                        <!--First column-->
+                        <div class="about col-md-6" style="padding-left: 5rem;">
+                            <h5 class="text-uppercase">ABOUT</h5>
+                            <p>
+                                <strong>LinkMe</strong>LinkMentalHeath was co-founded by two brothers who are motivated by the challenges
+                                of finding help. Our platform connects people to in-person therapy services regardless of
+                                their budget. We have a vision to make mental health support accessible to everyone who needs
+                                or wants it. We are starting with the 4.75 million Canadians who are struggling with a mental
+                                health condition but not getting the help they need. We are now launched in Mississauga and
+                                Toronto!</p>
+                        </div>
+                        <!--/.First column-->
+
+                        <!--Second column-->
+                        <div class="col-md-3">
+                            <!--<h5 class="text-uppercase">NEED MORE HELP?</h5>-->
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="contact-us.html">CONTACT US</a>
+                                </li>
+                                <li>
+                                    <a href="careers.html">CAREERS</a>
+                                </li>
+                                <li>
+                                    <a href="become-a-partner.html">BECOME A PARTNER</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.Second column-->
+
+                        <!--Third column-->
+                        <div class="col-md-3">
+                            <!--<h5 class="text-uppercase">NEED MORE HELP?</h5>-->
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="clients-terms-and-conditions.html">TERMS FOR CLIENTS</a>
+                                </li>
+                                <li>
+                                    <a href="therapists-terms-and-conditions.html">TERMS FOR THERAPISTS</a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html">PRIVACY POLICY</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.Third column-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.Footer Links-->
+        <div class="col-12 text-center pt-4 pb-4">
+          <a class="btn btn-sm btn-outline-elegant" href="https://www.facebook.com/LinkMentalHealth"><i class="fa fa-facebook"></i></a>
+          <a class="btn btn-sm btn-outline-elegant" href="https://twitter.com/linkmenthealth"><i class="fa fa-twitter"></i></a>
+          <a class="btn btn-sm btn-outline-elegant" href="https://www.instagram.com/linkmentalhealth/"><i class="fa fa-4x fa-instagram"></i></a>
+          <a class="btn btn-sm btn-outline-elegant" href="https://www.linkedin.com/company/linkmentalhealth/"><i class="fa fa-linkedin"></i></a>
+        <!--Copyright-->
+        <div class="col-12 footer-copyright py-3 text-center">
+            © {{ new Date().getFullYear() }} Copyright:
+            <a href="https://linkmentalhealth.com"> LinkMentalHealth </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+
+    <!-- SCRIPTS -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA99KkLe7GZtYGJZcX-RQHJA_G-Q9jwU9Q&libraries=places&callback=initialize"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- To Generate Current Year in Footer -->
+    <script>
+        new Vue({
+            el: '.footer-copyright',
+        });
+    </script>
+    <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        gapi.load('auth2', function () {
+            // Library loaded.
+        });
+    </script>
+    <script>
+
+        let windowLocation = window.location.search;
+        console.log("windowLocation")
+        console.log(windowLocation)
+        //this is used to force the location to the end of the url
+        if(windowLocation.endsWith("undefined")){
+        // //     // let myLoc = windowLocation.indexOf("mylocation=")+11;
+        // //     // let lang = windowLocation.indexOf("&lang")
+            let newLocation = windowLocation.substring(0, windowLocation.length-10);
+            //     console.log(newLocation)
+            let resultingStr = newLocation + "="+ windowLocation.substring((windowLocation.indexOf("mylocation=")+11), windowLocation.indexOf("&lang"))
+            //     console.log(resultingStr)
+            window.location.search = resultingStr;
+        }
+
+        var _params = window.location.search.substr(1);
+        _params = '{"' + _params.replace(/&/g, '","').replace(/=/g, '":"') + '"}', function (key, value) { return key === "" ? value : decodeURIComponent(value) }
+        _params = JSON.parse(_params);
+        //  Note: This is a quickfix solution.
+        //  TODO: Polish for reusability.
+        for(prop in _params){
+            if(prop === "location"){
+                _params[prop] = decodeURIComponent(_params[prop]);
+            }
+            if(_params[prop].indexOf('+') > -1){
+                _params[prop] = _params[prop].split('+').join(' ');
+            }
+            _params[prop] = decodeURIComponent(_params[prop])
+        }
+
+        let funding = {};   //  amount of funding populated by AJAX call below
+                            //  passed into createElegibility()
+        let fundingString = "";  //  passed into details page and populated by AJAX call.
+        $.ajax({
+            type: 'POST',
+            url: '/api/matchUsingScore',
+            dataType: 'json',
+            data: JSON.stringify(_params),
+            contentType: 'application/json',
+            success: function (data, status) {
+                console.log("status" + status)
+                therapists = data;
+                //  build funding string
+                funding.institution = _params.institution;
+                console.log(_params);
+                switch (_params.institution) {
+                    case 'UTM Undergrad':
+                        funding.amount = 125;
+                        funding.sessions = 20;
+                        break;
+                        case 'UTM Graduate':
+                            funding.amount = 500;
+                            break;
+                    case 'UOFT Undergrad':
+                        funding.amount = 125;
+                        funding.sessions = 20;
+                        break;
+                        case 'UOFT Graduate':
+                            funding.amount = 500;
+                            break;
+                    case 'RYE':
+                        funding.amount = 500;
+                        break;
+                        case 'SHERIDAN':
+                            funding.amount = 500;
+                            break;
+                    default:
+                        funding.amount = 0;
+                        break;
+                }
+                //  generate coverage msg.
+                fundingString = `${(funding.amount > 0) ? "You can use your health insurance to pay: $" + funding.amount +
+                    ((funding.institution === "UOFT Undergrad"  || funding.institution === "UTM Undergrad") ? ` per session for ${funding.sessions} sessions` :
+                    funding.institution === "UOFT Graduate" || funding.institution === "UTM Graduate" ? ' total':
+                    funding.institution === "SHERIDAN" ? 'in total, covering 60% of each session.': ""):
+                    "Please check to see if you have coverage"}`;
+                //  TODO:   Check if ajax response contains a pure
+                //          array of public programs or private programs
+                //          to skip this step.
+                let publicPrograms = therapists.filter(therapist => therapist.publicprograms === "yes");
+                let privatePrograms = therapists.filter(therapist => therapist.publicprograms == null);
+                therapists = privatePrograms.concat(publicPrograms);    //  private programs first before public programs
+                //  build therapist list
+                therapists.forEach(therapist => {
+                        let therapistObj = {
+                            id: therapist._id,
+                            name: therapist.name,
+                            title: therapist.title,
+                            short_summary: therapist.short_summary,
+                            photo_link: therapist.photo_link,
+                            treatment_type: therapist.treatment_type,
+                            lang: therapist.lang,
+                            average_price: therapist.average_price,
+                            recommendations: therapist.recommendations,
+                            distance: therapist.distance,
+                            duration: therapist.duration,
+                            average_wait_time: therapist.average_wait_time,
+                            city: therapist.city,
+                            isLowIncome: therapist.publicprograms === "yes" && therapist.publicprograms != null
+                        }
+                        $('#therapist-table-tr').append(getTherapistHTML(therapistObj));    //  render therapist.
+                });
+                //initialize tooltips
+                $('[data-toggle="tooltip"]').tooltip()
+                //  set text
+                document.querySelector('#funding h3').textContent = fundingString;
+                //  set values to be passed to 'details.html'
+                document.querySelector("#fundingStr").value = fundingString;
+            },
+            error: function(){
+                $('#therapist-table-tr').append("We are sorry but we couldn't find any results! This is usually a result from when there is an error in the location that has been entered.");
+                document.querySelector('#funding h3').textContent = "Funding options not found.";
+            }
+        });
+        // AIzaSyAn7FK01jtGqmTrTrqElFFP4JWyzSnCUkc - datamatrix
+        var params_tmp = window.location.search.substr(1);
+        params_tmp = JSON.parse('{"' + params_tmp.replace(/&/g, '","').replace(/=/g, '":"') + '"}', function (key, value) { return key === "" ? value : decodeURIComponent(value) })
+        params_tmp = JSON.stringify(params_tmp);
+        //  TODO: Wait on DB changes for ability to pull city from specific therapist.
+        function getTherapistHTML(therapistObj){
+            // console.log(`${therapistObj.name}: ${therapistObj.average_price}`);
+            // console.log(`${therapistObj.lang}`)
+            return  `<div class="col-md-12 pt-3 pb-3 mb-3" style="box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, .2);">
+                        <div class="row" style="overflow: hidden">
+                            <div class="container clearfix">
+                                <img src="${therapistObj.photo_link}" alt="${therapistObj.name}" class="therapist-img pull-left"/>
+                                <div class="therapist-details pull-right pl-4">
+                                    <h4 style="margin: 0;" class='hide-overflow'>${therapistObj.name}</h4>
+                                    <p class='hide-overflow'>${therapistObj.title}<i class="fas fa-info-circle" style="padding-left: 10px" data-toggle="tooltip" data-placement="right" title="${therapistObj.title}"></i></p>
+                                    <hr style="margin: .3rem 0" />
+                                    <p class='control-overflow'><span class="therapist-postal">${therapistObj.city}</span><span class="travel-icons"><i class="fas fa-map-marker-alt fa-fw"></i> ${therapistObj.distance} <i class="fa fa-car fa-fw ml-1"></i> ${therapistObj.duration}</span></p>
+                                    <hr style="margin: .3rem 0" />
+                                    <p class="therapist-summary">${therapistObj.short_summary}</p>
+                                    <p class='control-overflow'><span class="propertyBold">Price Per Session: </span>${formatAvgPrice(therapistObj.average_price, therapistObj.isLowIncome)}</p>
+                                    <span class="propertyBold">
+                                        ${createEligibility(funding, therapistObj.average_price)}
+                                    </span>
+                                    <span class="sessionsFree">${(funding.amount > 0  ) ?
+                                        `<p class="control-overflow sessionsFree">
+
+                                         You're covered by your insurance for the number of sessions noted directly above this line.<i class="fas fa-info-circle" style="padding-left: 10px" data-toggle="tooltip" data-placement="right" title="After paying for your session yourself, submit a claim and get your money back within about a week or two."></i>
+                                        </p>`
+                                        : ''}
+                                    <p class="control-overflow>${!therapistObj.isLowIncome ? "therapist-summary" : ''}</p>
+                                    <p class="control-overflow> <span class="propertyBold">${therapistObj.isLowIncome ? "therapist-summary" : ''}</span><span class="propertyBold">Language: </span>${therapistObj.lang}</p>
+                                    <form action="details.html" method="GET" class="mt-2 vh-center">
+                                        <input id="therapist_id" type="hidden" name="therapist_id" value="${therapistObj.id}" />
+                                        <input id="fundingStr" type="hidden" name="funding" value="${fundingString}" />
+                                        <input id="coverage" type="hidden" name="coverage" value="${createEligibility(funding, therapistObj.average_price, true)}" />
+                                        <button type="submit" class="btn waves-effect" style="background-color: #66a5d7; border: solid thin white; width: 100%; font-size:10px;">See Profile & Book Now!</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+        }   //  Pass session ID from form
+        //  display '$' only for non-low income programs.
+        function formatAvgPrice(price, isLowIncome){
+            //  add '$' if not lowIncome
+            return !isLowIncome ? `$${price}` : price;
+        }
+        //  Determines string displayed for therapist coverage.
+        //  params: fundingObj: Obj, price: number, forDetails: bool
+        function createEligibility(fundingObj, price, forDetails = false) {
+            switch (fundingObj.institution) {
+              case "UTM Undergrad":
+              case "UOFT Undergrad":
+                    return (price > 0) ? `${forDetails ? `You are covered for ` : ``}${fundingObj.sessions} sessions ${(fundingObj.amount < price) ? "plus additional $" + (price - fundingObj.amount) + " charge" + "(you’d have to pay that out of pocket)" : ''}` : `${forDetails ? "You are covered for " : ''}unlimited sessions`
+                    break;
+                case "RYE":
+                case "SHERIDAN":
+                case "UOFT Graduate":
+                case "UTM Graduate":
+                    return `${forDetails ? `You are covered for ` : ``}${(price > 0) ? Math.floor(funding.amount / price) : `unlimited`} sessions`
+                    break;
+                default:
+                    if(price == null){
+                        return `Confirm with institution`
+                    } else{
+                        return (price > 0 ) ? `Check your coverage` : `This is a public program with low income services.`;
+                    }
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

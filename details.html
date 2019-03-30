@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MF7334J');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LinkMentalHealth Detailed Information</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Date Time Picker -->
+    <link rel="stylesheet" href="css/bootstrap-material-datetimepicker.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/css/ripples.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Vue.js production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        p{
+            font-size: 1.15em;
+        }
+    </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF7334J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/ripples.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/js/material.min.js"></script>
+<!--    <script type="text/javascript" src="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/js/material.min.js"></script>-->
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-light grey lighten-5">
+        <a class="navbar-brand" href="home.html"><img src="img/logo.png" height="45px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <span class="navbar-text">
+                <button class="btn btn-sm btn-outline-elegant" onclick="window.location.href='home.html'">Back Home</button>
+<!--            <button class="btn btn-sm btn-outline-elegant">Login</button>
+                <button class="btn btn-sm btn-outline-elegant">Register</button>-->
+                <button class="btn btn-sm btn-elegant" onclick="window.location='therapist-questionnaire.html'"><a style="color:white;" href="therapist-questionnaire.html">FOR THERAPISTS</a></button>
+            </span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center pt-4">
+                <div class="col-md-3 text-center">
+                    <img id="profile-image" src="" alt="" class="w-100 mb-3"/>
+                    <div id="bookNow" class="pb-4">
+                        <p>Available for appointment</p>
+                        <button id="bookNow" class="btn btn-success w-75" type="submit" onclick="show_therapist_simplybook_calendar();"><h4>Request Appointment!</h4></button>
+                        <button class="btn btn-elegant w-75" type="submit" onclick="history.back();"><h4>Go Back</h4></button>
+                    </div>
+                    <div id="walkin-div">
+                        <h5>Online booking is not available for this program. Please visit their office to book an appointment.</h5>
+                        <div id="toggle_visible_button">
+                            <button id="details_button" class="btn btn-success" onClick="ga('send', 'event', 'publicprogram', 'click', 'locationcheck');">Click here for location details</button>
+                        </div>
+                        <div id="location_details" class="mt-4">
+                            <p id="public_location"><!--Location--></p>
+                            <p id="public_phone"><!--Phone Number--></p>
+                            <p id="public_policy"><!--Pricing Policy--></p>
+                        </div>
+                    </div>
+                    <div id="detailemailcard" class="mt-4">
+                        <h6>HELP US STAY UPDATED!</h6>
+                        <form id="email_permission" action="" method="post">
+                                <input type="hidden" value="Email" name="email_feedback" id="email_feedback">
+                                        <div class="form-group" style="font-size: 85%;">
+                                            <label>Please enter your email:</label>
+                                            <input type="text" class="form-control" placeholder="Email" name="fname" id="fname" style="margin-bottom:10px;">
+                                            <input type="checkbox" name="permission" value="Permission"> I give permission for LinkMentalHealth to contact me to recieve feedback and get an update on my mental health journey.<br>
+                                        </div>
+                            </form>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-light">
+                    <h2 class="first-name"><!--Name--></h2>
+                    <h3 id="title"><!--Title--></h3>
+                    <hr />
+                    <h3>Summary</h3>
+                    <p>
+                        <span id="bio"><!--Summary--></span>
+                    </p>
+                    <hr />
+                    <p>Price: <span id="price"><!--Price--></span></p>
+                    <p id="coverage"><!--Coverage--></p>
+                    <hr />
+                    <p id="certifications" class="mb-4"><!--Certifications--></p>
+                </div>
+                <div class="col-md-3">
+                    <div class="w-100 justify-content-center d-flex align-content-center mt-4 mb-4" style="background-color: #66A5D7; color: white; margin: 0 auto;">
+                        <h5 id="fundingStr"><!--Funding String--></h5>
+                    </div>
+                    <div id="locationContainer">
+                        <h5>Location:</h5>
+                        <h6 id="location"><!--Location--></h6>
+                        <hr />
+                    </div>
+
+                    <h5>Treatment Types:</h5>
+                    <h6 id="treatment_type"><!--Treatment List--></h6>
+                    <hr />
+                    <h5>Specializations:</h5>
+                    <div id="specialty">
+                        <!--Specialization List-->
+                    </div>
+                    <hr />
+                    <p>
+                        If you have any questions or need help booking, please contact us at <a href="mailto:admin@linkmentalhealth.com" class="text-primary">admin@linkmentalhealth.com</a>
+                    </p>
+                </div>
+        </div>
+    </div>
+
+<script>
+    
+    var parameters = window.location.search.substr(1).split('&');   // capture GET parameters.
+    let therapist_id = parameters[0].substr(parameters[0].indexOf('=') + 1);
+    let fundingString = parameters[1].substr(parameters[1].indexOf('=') + 1);
+    let coverageString = parameters[2].substr(parameters[2].indexOf('=') + 1);
+    
+    const getContent = (str) => decodeURIComponent(str).split('+').join(' ');
+    
+    $("#fundingStr").prepend(getContent(fundingString));
+    $("#coverage").prepend(getContent(coverageString));
+
+    var simplybook_loc;
+    var simplybook_pro;
+    // 1. Query using ID
+    $.get("https://linkmentalhealthmongo.herokuapp.com/api/therapists/" + therapist_id, function(data, status){
+
+        // if psychologists and registered social works do not show the insurance coverage message
+        if (data["coverage"] == "yes")
+            $('.coverage').hide();
+        if (data["publicprograms"] == "yes")
+            $("#detailemailcard").show();
+        else
+            $("#detailemailcard").hide();
+
+        $('#profile-image').attr("src", data["photo_link"]);
+        $('.first-name').html(data["name"]);
+        $('#bio').html(data["bio"]);
+        $('.bio1').html(data["bio1"]);
+        $('.bio2').html(data["bio2"]);
+        $('#title').html(data["title"]);
+
+        $('#location').html(data.location);
+        $('#price').html(data.average_price > 0 ? '$' + data.average_price : data.average_price);
+        $('#specialty').html(createListHTML(data.specialty)); //  set specialty list
+        $('#treatment_type').html(createListHTML(data.treatment_type));
+        $('#preference').html(data["booking_preference"]);
+        $('#certifications').html(createListHTML(data.certifications));
+
+        if (data.publicprograms === "yes"){
+            $(".bio1").hide();
+            $(".bio2").hide();
+            $("#locationContainer").hide();
+            $("#bookNow").hide();
+            $('#walkin-div').show();
+        } else{
+            $('#walkin-div').hide();
+        }
+
+        //  location details button intialization
+        $("#location_details").hide();
+        $("#public_location").html(data.location);
+        $("#public_phone").html(data.bio1);
+        $("#public_policy").html(data.bio2);
+    });
+
+    //  'click' event listener
+    $("#details_button").click(() => {
+        $("#location_details").toggle();
+    })
+
+    function createListHTML(arr){
+        let specList = '<ul>';
+        arr.forEach(x => specList += `<li><h5>${x}</h5></li>`);
+        specList += '</ul>';
+
+        return specList;
+    }
+
+    function show_therapist_simplybook_calendar(){
+        console.log("Calling SimplyBook Function");
+
+        var simplybook_loc;
+        var simplybook_pro;
+        // 1. Query using ID
+        $.get("https://linkmentalhealthmongo.herokuapp.com/api/therapists/" + therapist_id, function(data, status){
+            console.log(data.simplybook_provider);
+            simplybook_pro = global_provider = data["simplybook_provider"];
+            simplybook_loc = data["simplybook_location"]
+            console.log ('before call widget '+global_provider);
+            $('#simplybook_loc').html(data["simplybook_location"]);
+            $('#simplybook_pro').html(data["simplybook_provider"]);
+
+            var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/linkmentalhealth.simplybook.me","theme":"classic","theme_settings":{"sb_base_color":"#33bb60","body_bg_color":"#fdfdfd","hide_img_mode":"1","sb_busy":"#dad2ce","sb_available":"#d3e0f1"},"timeline":"modern_week","datepicker":"inline_datepicker","is_rtl":false,"app_config":{"predefined":{"location": simplybook_loc,"provider": simplybook_pro, "service":"1"}}});
+        });
+    }
+</script>
+
+    <script src="https://simplybook.me/v2/widget/widget.js"></script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+<footer class="page-footer row font-small pt-4" style="color: #9da3b3; ">
+
+    <!--Footer Links-->
+    <div class="col-12 text-center text-md-left" style="background-color: white;">
+        <div class="row justify-content-center" href="#">
+            <div class="col text-center pb-4">
+                <h1 class="h1 font-weight-bold text-center pt-4" style="color: black;padding-bottom: 15px;">Our Partners</h1>
+                <img src="images/partners.svg" class="column" style="padding-top: 30px;" alt="communitech partnership with linkmentalhealth">
+                <img src="images/Vaughan.jpg" class="column" style="width: 300px;" alt="Vaughan partnership with linkmentalhealth">
+                <img src="images/ICUBE.jpg" class="column" style="width: 175px;" alt="ICUBE partnership with linkmentalhealth">
+                <img src="images/RIC.jpg" style="width: 226px;" alt="RIC partnership with linkmentalhealth">
+                <img src="images/rising-youth.png" style="width: 700px;max-width:100%;" alt="Rising Youth partnership with linkmentalhealth">
+            </div>
+
+        </div>
+
+            <footer class="row text-center m-4">
+                <div class="col">
+                    <p>Copyright &copy; 2018 LinkMentalHealth</p>
+                </div>
+            </footer>
+</html>

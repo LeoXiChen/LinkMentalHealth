@@ -1,0 +1,386 @@
+<html lang="en">
+        <head>
+		    <!-- Google Tag Manager -->
+		    <script>(function (w, d, s, l, i) {
+		        w[l] = w[l] || [];
+		        w[l].push({
+		            'gtm.start':
+		                new Date().getTime(), event: 'gtm.js'
+		        });
+		        var f = d.getElementsByTagName(s)[0],
+		            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+		        j.async = true;
+		        j.src =
+		            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		        f.parentNode.insertBefore(j, f);
+		    })(window, document, 'script', 'dataLayer', 'GTM-MF7334J');</script>
+		    <!-- End Google Tag Manager -->
+
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <title>LinkMentalHealth</title>
+                <!-- Favicons -->
+                <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+                <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+                <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+                <link rel="manifest" href="favicon/site.webmanifest">
+                <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+                <meta name="msapplication-TileColor" content="#00aba9">
+                <meta name="theme-color" content="#ffffff">
+                <!-- Font Awesome -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                <!-- Bootstrap core CSS -->
+                <link href="css/bootstrap.min.css" rel="stylesheet">
+                <!-- Material Design Bootstrap -->
+                <link href="css/mdb.min.css" rel="stylesheet">
+                <!-- Your custom styles (optional) -->
+                <link href="css/therapists.css" rel="stylesheet">
+                <link href="css/style.css" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                <!-- Vue.js production version, optimized for size and speed -->
+                <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+            </head>
+
+        <body style="font-family:sans-serif">
+			<!-- Google Tag Manager (noscript) -->
+			<noscript>
+			    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF7334J"
+			            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			</noscript>
+			<!-- End Google Tag Manager (noscript) -->
+            <div id="header">
+                    <nav class="navbar navbar-expand-lg navbar-light grey lighten-5">
+                        <a class="navbar-brand" href="https://linkmentalhealth.com"><img src="img/logo.png" height="45px;" alt="LinkMentalHealth logo"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                            <span class="navbar-text">
+                                <button class="btn btn-sm btn-outline-elegant" onclick="window.location.href='https://linkmentalhealth.com'">Back Home</button>
+                              <!--  <button class="btn btn-sm btn-outline-elegant">Login</button>
+                                <button class="btn btn-sm btn-outline-elegant">Register</button>
+                                <button class="btn btn-sm btn-elegant"><a href="therapists.html" style="color: white;">FOR THERAPISTS</a></button> -->
+                            </span>
+                        </div>
+                    </nav>
+                </div>
+
+				    <!--Footer-->
+    <footer class="page-footer row font-small pt-4" style="color: #9da3b3; ">
+
+        <!--Footer Links-->
+        <div class="col-12 text-center text-md-left" style="background-color: white;">
+            <div class="row justify-content-center" href="#">
+                <div class="col text-center pb-4">
+                    <h1 class="h1 font-weight-bold text-center pt-4" style="color: black;padding-bottom: 15px;">Our Partners</h1>
+
+                    <img src="images/CommuniTech.jpg" class="column" alt="communitech partnership with linkmentalhealth"> &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <img src="images/Vaughan.jpg" class="column" alt="Vaughan partnership with linkmentalhealth"> &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <img src="images/IMD_Heath.jpg" class="column" alt="iMD partnership with linkmentalhealth">&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <img src="images/RIC_Centre.jpg" alt="RIC partnership with linkmentalhealth">
+                    <br>
+                    <br>
+
+                    <img src="images/ICUBE_UTM.jpg" alt="ICUBE partnership with linkmentalhealth"> &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <img src="images/Thinking_It_Global.jpg" style="width: 700px;max-width:100%;" alt="Rising Youth partnership with linkmentalhealth">
+                    <br>
+                    <br>
+
+                    <img src="images/UTSU.jpg" alt="University of Toronto Students' Union partnership with linkmentalhealth"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <img src="images/Edge_Sheridan.jpg" alt="Edge Entrepreneurship Centre partnership with linkmentalhealth"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <img src="images/SVZ_Rayerson_Learning_Zone.jpg" alt="Social Venture Zone - Rayerson University partnership with linkmentalhealth">
+                    <br>
+                    <br>
+
+                </div>
+
+            </div> 
+				
+				
+         <div class="container">
+                <p style="text-align: left;font-size: 20px; margin-top: 20px; font-family: 'Archivo Narrow', sans-serif !important; color: whitesmoke; background-color: #66a5d7; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    We're looking for more diverse and qualified private therapists to match with new clients. Find the clients that will benefit from your services the most! 
+                 </p>
+                <p style="text-align: left;font-size: 15px;">
+                    LinkMentalHealth is a web-app that matches and book clients with the right mental health professional, no matter 
+                    their needs. We link therapists to more clients and lower patient dropout 
+                    due to our matching algorithm. Getting started is easy:
+                </p>
+                <div class="grid-container diagramForQuestions" style="width:100%; text-align: center; margin: auto;">                   <!--Card image-->
+                    <div class="view overlay rounded text-center z-depth-2 grid-item customyellow" style="float: left; padding-top: 10px;">
+                        <i class="fa fa-pencil-square-o pb-4" style="font-size:34pt;"></i>
+                        <h2 class="text-center stepsh1">Sign Up</h2>                        
+                    </div>
+                    <div class="view overlay rounded grid-item text-center" style="padding-top: 50px;color:#fbbb37;">
+                            <i class="fa fa-arrow-right pb-4" style="font-size:34pt;"></i>
+                    </div>
+                    <div class="view overlay rounded z-depth-2 text-center customyellow grid-item" style="padding-top: 10px;">
+                        <i class="fa fa-envelope-o pb-4" style="font-size:34pt;"></i>
+                        <h2 class="text-center stepsh1">Get Confirmation</h1>
+                    </div>
+                    <div class="view overlay rounded text-center grid-item" style="padding-top: 50px;color:#fbbb37;">
+                        <i class="fa fa-arrow-right pb-4" style="font-size:34pt;"></i>
+                    </div>
+                    <div class="view overlay rounded z-depth-2 text-center customyellow grid-item"style="padding-top: 10px;">
+                        <i class="fa fa-users pb-4" style="font-size:34pt;"></i>
+                        <h2 class="text-center stepsh1">Matching Starts</h1>
+                    </div>
+                </div>
+            </br>
+            </br>
+                <div class="therapistPoints" style="display: flex; text-align: center; flex-wrap:wrap; justify-content:space-between" >
+                    <div><i class="fa fa-check-square-o"></i> Diverse Clients</div>
+                    <div><i class="fa fa-check-square-o"></i> Secure</div>
+                    <div><i class="fa fa-check-square-o"></i> Trusted</div>
+                    <div><i class="fa fa-check-square-o"></i> Reliable</div>
+                    <div><i class="fa fa-check-square-o"></i> Calender Integration</div>
+                    <div><i class="fa fa-check-square-o"></i> Tailored Matches</div>
+                    <div><i class="fa fa-check-square-o"></i> Trusted</div>
+                    <div><i class="fa fa-check-square-o"></i> Reliable</div>
+                </div>
+                <form id="therapist-form" style="text-align: center;padding: 15px;" method="GET">
+                <h3>Sign Up Today!</h3>
+            </br>
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="user_name">
+                </div>
+                <div>
+                    <label for="name">E-mail:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div>
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" id="job-title" name="job_title">
+                </div>
+                <div>
+                    <label for="service-msg">Short summary of service:</label>
+                    <textarea id="service-msg" name="service_message"></textarea>
+                </div>
+                <div>
+                    <label for="treatment">Treatment Type:</label>
+                    <input type="text" id="treatment" name="treatment">
+                </div>
+                <div>
+                    <label for="specialty">Condition Specialty:</label>
+                    <input type="text" id="specialty" name="specialty">
+                </div>
+                <div>
+                    <label for="booking">Booking preferences:</label>
+                    <input type="text" id="booking" name="booking">
+                </div>
+                <div>
+                    <label for="gender">Gender:</label>
+                    <input type="text" id="gender" name="gender">
+                </div>
+                <div>
+                    <label for="insurance">Insurance provider Accepted:</label>
+                    <input type="text" id="insurance" name="insurance">
+                </div>
+                <div>
+                    <label for="certifications">Certifications:</label>
+                    <input type="text" id="certifications" name="certifications">
+                </div>
+                <div>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location">
+                </div>
+                <div>
+                    <label for="bio">Short biography:</label>
+                    <textarea id="bio" name="bio"></textarea>
+                 </div>
+                 <div>
+                    <label for="price">Price of booking:</label>
+                    <input type="text" id="price" name="price">
+                </div>
+                <div>
+                    <label for="religion">If asked by client, can you integrate religious components into therapy? If so, which religion?:</label>
+                    <input type="text" id="religion" name="religion">
+                </div>
+                <div>
+                    <label for="language">Other than English, which language can you administor therapy in?</label>
+                    <input type="text" id="language" name="language">
+                </div>
+                <!-- <div>
+                    <label for="photo">Please attach a photo:</label>
+                    <input type="file" id="fileInput" name="filename" accept="image/gif, image/jpeg, image/png">
+                </div>-->
+                <div class="col-12">
+                        <button type="submit" class="btn btn-lg" style="background-color: #66a5d7; border: solid thin white;">SUBMIT</button>
+                </div>
+					
+            </form>
+            <p style="text-align: left;font-size: 20px;"></p>
+            Have questions? Please e-mail us at <a href="mailto:admin@linkmentalhealth.com" style="text-decoration: underline;">admin@linkmentalhealth.com</a>.
+            </p>
+        </div>
+
+
+
+    <!--Footer-->
+    <footer class="page-footer row font-small pt-4" style="color: #9da3b3; ">
+
+        <!--Footer Links-->
+        <div class="col-12 text-center text-md-left" style="background-color: white;">
+
+            <div class="row footer">
+
+                <!--First column-->
+                <div class="about col-md-6" style="padding-left: 5rem;">
+                    <h5 class="text-uppercase">ABOUT</h5>
+                    <p><strong>LinkMe</strong>ntalHeath uses a researched questionnaire comprised of 16 questions to
+                        help you find the best therapist within your budget and treatment need to help in what you are
+                        suffering from. Once you find a therapist that matches your needs, you can book them within a 48
+                        hour period. </p>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-3">
+                    <!--<h5 class="text-uppercase">NEED MORE HELP?</h5>-->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="contact-us.html">CONTACT US</a>
+                        </li>
+                        <li>
+                            <a href="careers.html">CAREERS</a>
+                        </li>
+                        <li>
+                            <a href="become-a-partner.html">BECOME A PARTNER</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <!--Third column-->
+                <div class="col-md-3">
+                    <!--<h5 class="text-uppercase">NEED MORE HELP?</h5>-->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="clients-terms-and-conditions.html">TERMS FOR CLIENTS</a>
+                        </li>
+                        <li>
+                            <a href="therapists-terms-and-conditions.html">TERMS FOR THERAPISTS</a>
+                        </li>
+                        <li>
+                            <a href="privacy-policy.html">PRIVACY POLICY</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Third column-->
+            </div>
+        </div>
+        <!--/.Footer Links-->
+        <div class="col-12 text-center pt-4 pb-4">
+            <a class="btn btn-sm btn-outline-elegant" href="https://www.facebook.com/LinkMentalHealth"><i class="fa fa-facebook"></i></a>
+            <a class="btn btn-sm btn-outline-elegant" href="https://twitter.com/linkmenthealth"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-sm btn-outline-elegant" href="https://www.instagram.com/linkmentalhealth/"><i class="fa fa-4x fa-instagram"></i></a>
+            <a class="btn btn-sm btn-outline-elegant" href="https://www.linkedin.com/company/linkmentalhealth/"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <!--Copyright-->
+        <div class="col-12 footer-copyright py-3 text-center">
+            © {{ new Date().getFullYear() }} Copyright:
+            <a href="https://linkmentalhealth.com"> LinkMentalHealth </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+</div>
+<!-- /container -->
+
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+<!-- Alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<!-- To Generate Current Year in Footer -->
+<script>
+    new Vue({
+        el: '.footer-copyright',
+    });
+</script>
+
+<!-- Script submission form -->
+<script>
+
+    $('#therapist-form').on('submit', function(event){
+        var elements = $('form').serializeArray();
+        var obj ={};
+        for(var i = 0 ; i < elements.length ; i++){
+            var item = elements[i];
+            obj[item.name] = item.value;
+            console.log(item.name + ' = ' + item.value)
+        }
+
+        // var fileInput = document.getElementById("fileInput").value
+        // console.log(fileInput)
+        var body = JSON.stringify(obj);
+
+        console.log(obj);
+        //API ENDPOINT
+        $.ajax({
+            type: 'POST',
+            url: '/api/pendingtherapists',
+            dataType: 'json',
+            data: body,
+            contentType : 'application/json',
+            success: function(data) {
+                // window.location.replace("http://linkmentalhealthmongo.herokuapp.com");
+
+            }
+
+        });
+
+        // return false;
+    });
+</script>
+
+<!-- Validation -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MF7334J');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LinkMentalHealth</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/questions.css">
+    <!-- Fullpage.js library -->
+    <link rel="stylesheet" href="FullPage/jquery.fullpage.css">
+    <!-- Dont remove below code - bug fix for IE -->
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+    <!-- Vue.js production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <title>LinkMentalHealth - Questionnaire</title>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+	    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF7334J"
+	            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+<div id="header">
+    <nav class="navbar navbar-expand-lg navbar-light grey lighten-5">
+        <a class="navbar-brand" href="http://www.linkmentalhealth.com/home_ar.html"><img src="img/logo.png" height="45px;" alt="LinkMentalHealth logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <span class="navbar-text">
+                <button class="btn btn-sm btn-outline-elegant" onclick="window.location.href='http://www.linkmentalhealth.com/home_ar.html'">الصفحة الرئيسية</button>
+				<button class="btn btn-sm btn-outline-elegant" onclick="window.location.href='contact-us.html'">التعليقات / تواصل معنا</button>
+<!--                <button class="btn btn-sm btn-outline-elegant">Login</button>
+                <button class="btn btn-sm btn-outline-elegant">Register</button>-->
+                <button class="btn btn-sm btn-elegant">الأطباء</button>
+            </span>
+        </div>
+    </nav>
+</div>
+<div id="footer">
+    <!--Copyright-->
+    <div class="col-12 footer-copyright py-3 text-center">
+        © {{ new Date().getFullYear() }} Copyright:<a href="http://www.linkmentalhealth.com/home_ar.html"> LinkMentalHealth </a>
+    </div>
+    <!--/.Copyright-->
+</div>
+
+<form id="questions-form" action="results.html" method="GET">
+<div id="fullpage">
+	<div class="section" data-anchor="section0">
+        <div class="intro">
+            <div class="intro-div row p-4 text-left">
+                <h3 class="ttext col-12">
+          سوف يتم نقلك الآن إلى استبيان مدته 90 ثانية لتوصيلك الى الأطباء المناسبين لك/ي. كلما كانت اجاباتك صريحة، كلما كان النتيجة مناسبة لك اكثر. يمكنك تخطي 5 أسئلة إذا أردت الانتقال المباشر إلى قائمة المعالجين.
+		  يرجى قراءة البنود والشروط والخصوصية والموافقة عليها للحصول على تفاصيل حول كيفية تأمين بياناتك قبل المتابعة.
+		  يمكنك لاحقاً اختيار وحجز موعداً مع الطبيب المفضل لك/ي.
+			</h3>
+                <h3 class="ttext col-12 text-left">يرجى قراءة <a href="privacy.html" style="color:blue; text-decoration: underline;">البنود والشروط والخصوصية</a> والموافقة عليها للحصول على تفاصيل حول كيفية تأمين بياناتك قبل المتابعة.
+
+                </h3>
+
+                <div class="col text-center">
+                    <p class="col-12"><input type="checkbox" name="terms" id="terms"> أناأوافق </p>
+                    <button class="btn text-center" type="button" aria-pressed="true" style="background-color: #fbbb37;" onclick="confirmcheckbox();">استمر</button>
+                </div>
+            </div>
+
+		</div>
+	</div>
+    <!--Question 1
+    Input Radio Button Group Name - notfirsttime
+    Answer 1 yes id -> q1a1
+    Answer 2 no  id -> q1a2
+    -->
+	<div class="section" data-anchor="section1">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 6.7%">
+                    <span>١ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 93.3%">
+                    <span>١ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+
+	                <h5 class="heading-h5">المؤسسات والجامعات تملك خطط تأمين تغطي تكلفة الطبابة النفسية لمبلغ محدد. رجاءاً اختر نوع مؤسستك.</h5>
+	            </div>
+	            <div class="ttext col-12">
+	                <div class="row justify-content-center">
+	                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question1', 'click', 'q1a1');">
+	                        <input type='radio' id='q1a1' name='booking' value='UTM' class='radiobtn'/><label for='q1a1'><a href="#covered" onClick="ga('send', 'event', 'Question1', 'click', 'q1a1');">جامعة تورونتو في ميسيساجا (١٢٥$ مغطى للجلسة, ٢٠ جلسة) </a></label>
+	                    </div>
+	                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question1', 'click', 'q1a2');">
+	                        <input type='radio' id='q1a2' name='booking' value='UOFT' class='radiobtn'/><label for='q1a2'><a href="#covered" onClick="ga('send', 'event', 'Question1', 'click', 'q1a2');">
+
+جامعة تورونتو (١٢٥$ مغطى للجلسة, ٢٠ جلسة)</a></label>
+	                    </div>
+	                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question1', 'click', 'q1a3');">
+	                        <input type='radio' id='q1a3' name='booking' value='RYE' class='radiobtn'/><label for='q1a3'><a href="#covered" onClick="ga('send', 'event', 'Question1', 'click', 'q1a3');">  جامعة رايرسن Ryerson (٥٠٠$ مغطى بالمجموع)</a></label>
+	                    </div>
+	                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question1', 'click', 'q1a4');">
+	                        <input type='radio' id='q1a4' name='booking' value='OTHER' class='radiobtn'/><label for='q1a4'><a href="#section2" onClick="ga('send', 'event', 'Question1', 'click', 'q1a4');">مدرسة تعليم ما بعد الثانوي أخرى </a></label>
+	                    </div>
+	                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question1', 'click', 'q1a5');">
+	                        <input type='radio' id='q1a5' name='booking' value='NOTSTUDENT' class='radiobtn'/>
+	                        <label for='q1a5'><a href="#section2" onClick="ga('send', 'event', 'Question1', 'click', 'q1a5');">لست بمدرسة تعليم ما بعد الثانوي</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <div class="section" data-anchor="covered">
+            <div class="row justify-content-center">
+                <div class='heading-h2 col-12'>شكراً لك, سوف يتم توصيلك الى الأطباء المغطون من قبل التأمين فقط. </div>
+			</div>
+                <div class="col-12">
+                <a href="#section2" class="btn text-center" role="button" aria-pressed="true" style="background-color: #fbbb37;">استمر</a>
+                </div>
+	</div>
+
+    <!--
+    Question 2
+    Input Radio Button Group Name - suicide
+    Answer 1 yes id -> q2a1
+    Answer 2 no  id -> q2a2
+    -->
+    <div class="section" data-anchor="section2">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 13.3%">
+                    <span>٢ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 86.7%">
+                    <span>٢ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">هل تواجه حاليًا أفكاراً انتحارية؟</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question2', 'click', 'q2a1');">
+                        <input type='radio' id='q2a1' name='suicide' value='yes' class='radiobtn'/><label for='q2a1'><a href="#interventionsection" onClick="ga('send', 'event', 'Question2', 'click', 'q2a1');">نعم </a></label>
+                    </div>
+                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question2', 'click', 'q2a2');">
+                        <input type='radio' id='q2a2' name='suicide' value='no' class='radiobtn'/><label for='q2a2'><a href="#section3" onClick="ga('send', 'event', 'Question2', 'click', 'q2a2');">لا</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <!-- Intervention Section -->
+    <div class="section" data-anchor="interventionsection">
+		<div class="">
+            <div class="row justify-content-center">
+                <div class='heading-h2 col-12'>إذا كانت لديك خطط أو أفكار انتحار عاجلة ، نرجو أن تعلم أنك لست وحيداً
+					 <hr/>يرجى زيارة أقرب غرفة طوارئ أو الاتصال على:</div>
+
+                <div class='heading-h2 col-12'><strong>ONTARIO الصحة العقلية خط المساعدة</strong>
+                </div>
+                <div class='col-md-4 col-8'>
+                    <div class="p-4" style="border:solid thin; font-weight: bold; font-size: 16pt;">
+                    <a href="tel:1-866-531-2600"><strong>1-866-531-2600</strong></a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <a href="#section3" class="btn text-center" role="button" aria-pressed="true" style="background-color: #fbbb37;">تابع الاستبيان</a>
+                </div>
+            </div>
+		</div>
+	</div>
+
+    <!--
+    Question 3
+    Input Radio Button Group Name - gender
+    Answer 1 male id -> q3a1
+    Answer 2 female  id -> q3a2
+    Answer 3 Irrelevant id -> q3a3
+    -->
+
+    <div class="section" data-anchor="section3">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 20%">
+                    <span>٣ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 80%">
+                    <span>٣ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">هل لديك تفضيل يتعلق بجنس المعالج الخاص بك؟</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question3', 'click', 'q3a1');">
+                        <input type='radio' id='q3a1' name='gender' value='Male' class='radiobtn'/><label for='q3a1'><a href="#section4" onClick="ga('send', 'event', 'Question3', 'click', 'q3a1');">ذكر</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question3', 'click', 'q3a2');">
+                         <input type='radio' id='q3a2' name='gender' value='Female' class='radiobtn'/><label for='q3a2'><a href="#section4" onClick="ga('send', 'event', 'Question3', 'click', 'q3a2');">أنثى</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question3', 'click', 'q3a3');">
+                        <input type='radio' id='q3a3' name='gender' value='Irrelevant' class='radiobtn'/><label for='q3a3'><a href="#section4" onClick="ga('send', 'event', 'Question3', 'click', 'q3a3');">بدون تفضيل</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    Question 4
+    Input Radio Button Group Name - lang
+    Answer 1 English id -> q4a1
+    Answer 2 French  id -> q4a2
+    Answer 3 Arabic id -> q4a3
+    Answer 4 Urdu  id -> q4a4
+    Answer 5 >Hindi id -> q4a5
+    -->
+
+    <div class="section" data-anchor="section4">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width:  26.7%">
+                    <span>٤ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 73.3%">
+                    <span>٤ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">ما هي اللغة التي تريد أن تدار بها العلاج؟</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question4', 'click', 'q4a1');">
+                        <input type='radio' id='q4a1' name='lang' value='English' class='radiobtn'/><label for='q4a1'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a1');">الإنجليزية</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question4', 'click', 'q4a2');">
+                        <input type='radio' id='q4a2' name='lang' value='French' class='radiobtn'/><label for='q4a2'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a2');">الفرنسية</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question4', 'click', 'q4a3');">
+                        <input type='radio' id='q4a3' name='lang' value='Arabic' class='radiobtn'/><label for='q4a3'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a3');">العربية</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question4', 'click', 'q4a4');">
+                        <input type='radio' id='q4a4' name='lang' value='Urdu' class='radiobtn'/><label for='q4a4'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a4');">الأردية</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question4', 'click', 'q4a5');">
+                        <input type='radio' id='q4a5' name='lang' value='Hindi' class='radiobtn'/><label for='q4a5'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a5');">الهندية</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    Question 5
+    Input Radio Button Group Name - religion
+    Answer 1 Christian id -> q5a1
+    Answer 2 Muslim  id -> q5a2
+    Answer 3 Jewish id -> q5a3
+    Answer 4 Spiritual  id -> q5a4
+    Answer 5 >Not Religious id -> q5a5
+    -->
+
+    <div class="section" data-anchor="section5">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 33.3%">
+                    <span>٥ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 66.7%">
+                    <span>٥ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">هل ترغب في إضافة جزء ديني إلى علاجك؟ يرجى اختيار الدين المنطبق عليك.</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question5', 'click', 'q5a1');">
+                        <input type='radio' id='q5a1' name='religion' value='Christian' class='radiobtn'/><label for='q5a1'><a href="#section6" onClick="ga('send', 'event', 'Question5', 'click', 'q5a1');">مسيحي</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question5', 'click', 'q5a2');">
+                        <input type='radio' id='q5a2' name='religion' value='Muslim' class='radiobtn'/><label for='q5a2'><a href="#section6" onClick="ga('send', 'event', 'Question5', 'click', 'q5a2');">مسلم</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question5', 'click', 'q5a3');">
+                        <input type='radio' id='q5a3' name='religion' value='Jewish' class='radiobtn'/><label for='q5a3'><a href="#section6" onClick="ga('send', 'event', 'Question5', 'click', 'q5a3');">يهودي</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question5', 'click', 'q5a4');">
+                        <input type='radio' id='q5a4' name='religion' value='Spiritual' class='radiobtn'/><label for='q5a4'><a href="#section6" onClick="ga('send', 'event', 'Question5', 'click', 'q5a4');">الروحي</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question5', 'click', 'q5a6');">
+                        <input type='radio' id='q5a5' name='religion' value='Not Religious' class='radiobtn'/><label for='q5a5'><a href="#section6" onClick="ga('send', 'event', 'Question5', 'click', 'q5a6');">بدون تفضيل
+</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+    /*Question 6
+    Input Radio Button Group Name - insurance
+    Answer 1 yes id -> q6a1
+    Answer 2 no  id -> q6a2
+    */
+    -->
+
+    <div class="section" data-anchor="section6">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 40%">
+                    <span>٦ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 60%">
+                    <span>٦ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">هل لديك تأمين صحي؟</h2>
+                <h5 class="heading-h2"> هل تعلم؟ معظم مؤمني التأمين يملكون تغطية للأطباء النفسية. <br />
+				If you have practitioner coverage (chiropractor, etc.), you are very likely to have therapist coverage too.</h5>
+
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question6', 'click', 'q6a1');">
+                        <input type='radio' id='q6a1' name='insurance' value='yes' class='radiobtn'/><label for='q6a1'><a href="#section7" onClick="ga('send', 'event', 'Question6', 'click', 'q6a1');">نعم</a></label>
+                    </div>
+                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question6', 'click', 'q6a2');">
+                        <input type='radio' id='q6a2' name='insurance' value='no' class='radiobtn'/><label for='q6a2'><a href="#section8" onClick="ga('send', 'event', 'Question6', 'click', 'q6a2');">لا</a></label>
+	                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question6', 'click', 'q6a3');">
+	                        <input type='radio' id='q6a3' name='insurance' value='not sure' class='radiobtn'/><label for='q6a3'><a href="#section8" onClick="ga('send', 'event', 'Question6', 'click', 'q6a3');">غير متأكد</a></label>
+		                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    </div>
+    <!--
+    /*Question 7
+    Input Radio Button Group Name - insuranceprovider
+    Answer 1 manulife id -> q7a1
+    Answer 2 sunlife  id -> q7a2
+    Answer 3 greatwest id -> q7a3
+    Answer 4 bluecross  id -> q7a4
+    Answer 5 gsc id -> q7a5
+    Answer 6 other  id -> q7a6
+    */
+    -->
+    <div class="section" data-anchor="section7">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 46.7%">
+                    <span>٧ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 60%">
+                    <span>٧ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">ما هو مزود التأمين لديك؟</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                            <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question7', 'click', 'q7a1');">
+                                <input type='radio' id='q7a1' name='insuranceprovider' value='MANULIFE' class='radiobtn'/><label for='q7a1'><a href="#section8" onClick="ga('send', 'event', 'Question7', 'click', 'q7a1');"> Manulife مانولايف</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question7', 'click', 'q7a2');">
+                                <input type='radio' id='q7a2' name='insuranceprovider' value='SUNLIFE' class='radiobtn'/><label for='q7a2'><a href="#section8" onClick="ga('send', 'event', 'Question7', 'click', 'q7a2');">Sun Life سن لايف</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question7', 'click', 'q7a3');">
+                                <input type='radio' id='q7a3' name='insuranceprovider' value='GREATWEST' class='radiobtn'/><label for='q7a3'><a href="#section8" onClick="ga('send', 'event', 'Question7', 'click', 'q7a3');">Great-West Life جريت ويست لايف</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question7', 'click', 'q7a4');">
+                                <input type='radio' id='q7a4' name='insuranceprovider' value='BLUECROSS' class='radiobtn'/><label for='q7a4'><a href="#section8" onClick="ga('send', 'event', 'Question7', 'click', 'q7a4');">BLUE CROSS بلو كرس </a></label>
+                            </div>
+                            <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question7', 'click', 'q7a5');">
+                                <input type='radio' id='q7a5' name='insuranceprovider' value='GSC' class='radiobtn'/><label for='q7a5'><a href="#section8" onClick="ga('send', 'event', 'Question7', 'click', 'q7a5');">جرين شيلد كندا GreenShield</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question7', 'click', 'q7a6');">
+                                <input type='radio' id='q7a6' name='insuranceprovider' value='OTHER' class='radiobtn'/><label for='q7a6'><a href="#section8" onClick="ga('send', 'event', 'Question7', 'click', 'q7a6');">آخر</a></label>
+                            </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <!--
+    Question 8
+    Input Radio Button Group Name - income
+    Answer 1 <$20,000 id -> q8a1
+    Answer 2 $20,000-$35,000  id -> q8a2
+    Answer 3 $36,000-$60,000 id -> q8a3
+    Answer 4 $60,000-$100,000  id -> q8a4
+    Answer 5 >$100,000 id -> q8a5
+    -->
+
+    <div class="section" data-anchor="section8">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 53.3%">
+                    <span>٨ نم ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 46.7%">
+                    <span>٨ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">نرغب في معرفة ما إذا كنت مؤهلاً لبرامج العلاج الممولة بأسعار معقولة أو التي تمولها الحكومة حتى نتمكن من مشاركتها معك. <br />
+				يرجى إعلامنا بفئة الدخل الخاصة بك.</h2>
+            </div>
+           <div class="ttext col-12">
+               <div class="row justify-content-center">
+                   <div class="col-md-12 smallbox " onClick="ga('send', 'event', 'Question8', 'click', 'q8a1');">
+                       <input type='radio' id='q8a1' name='income' value='<$40,000' class='radiobtn'/><label for='q8a1'><a href="#section9" onClick="ga('send', 'event', 'Question8', 'click', 'q8a1');"> &lt;40,000 </a></label>
+                   </div>
+                   <div class="col-md-12 smallbox " onClick="ga('send', 'event', 'Question8', 'click', 'q8a2');">
+                       <input type='radio' id='q8a2' name='income' value='$40,000-$60,000' class='radiobtn'/><label for='q8a2'><a href="#section9" onClick="ga('send', 'event', 'Question8', 'click', 'q8a2');">$40,000-$60,000</a></label>
+                   </div>
+                   <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question8', 'click', 'q8a3');">
+                       <input type='radio' id='q8a3' name='income' value='$60,000-$100,000' class='radiobtn'/><label for='q8a3'><a href="#section9" onClick="ga('send', 'event', 'Question8', 'click', 'q8a3');">$60,000-$100,000 </a></label>
+                   </div>
+                   <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question8', 'click', 'q8a4');">
+                       <input type='radio' id='q8a4' name='income' value='$100,000+' class='radiobtn'/><label for='q8a4'><a href="#section9" onClick="ga('send', 'event', 'Question8', 'click', 'q8a4');">>$100,000+</a></label>
+                   </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question8', 'click', 'q8a5');">
+                        <input type='radio' id='q8a5' name='income' class='radiobtn'/><label for='q8a5'><a href="#section9" onClick="ga('send', 'event', 'Question8', 'click', 'q8a5');">تخطي السؤال</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center" onClick="ga('send', 'event', 'Question8', 'click', 'q8a6');">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn"  onclick="window.location.href='#section16'" onClick="ga('send', 'event', 'Question8', 'click', 'q8a6');">تخطي هذه الرحلة</button>
+        </div>
+    </div>
+
+
+    <!--
+    /*Question 9
+    Input Radio Button Group Name - agegroup
+    Answer 1 <12 id -> q9a1
+    Answer 2 13-17  id -> q9a2
+    Answer 3 18-23 id -> q9a3
+    Answer 4 24-29  id -> q9a4
+    Answer 5 30+ id -> q9a5
+    */
+    -->
+    <div class="section" data-anchor="section9">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 60%">
+                    <span>٩ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 40%">
+                    <span>٩ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">كم عمرك ؟ </h2>
+                <h5 class="heading-h2">أذا كان عمرك أقل من ١٣ سنة, الرجاء طلب المساعدة من بالغ لتعبئة هذا الاستبيان.</h5>
+            </div>
+            <div class="ttext col-12">
+             <div class="row justify-content-center">
+                <!-- <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question9', 'click', 'q9a1');">
+                        <input type='radio' id='q9a1' name='agegroup' value='<13' class='radiobtn'/><label for='q9a1'><a href="#section10" onClick="ga('send', 'event', 'Question9', 'click', 'q9a1');"> &le; 13 </a></label>
+                    </div> !-->
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question9', 'click', 'q9a2');">
+                        <input type='radio' id='q9a2' name='agegroup' value='13-17' class='radiobtn'/><label for='q9a2'><a href="#section10" onClick="ga('send', 'event', 'Question9', 'click', 'q9a2');">13-17</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question9', 'click', 'q9a3');">
+                        <input type='radio' id='q9a3' name='agegroup' value='18-29' class='radiobtn'/><label for='q9a3'><a href="#section10" onClick="ga('send', 'event', 'Question9', 'click', 'q9a3');">18-29</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question9', 'click', 'q9a4');">
+                        <input type='radio' id='q9a4' name='agegroup' value='30-39' class='radiobtn'/><label for='q9a4'><a href="#section10" onClick="ga('send', 'event', 'Question9', 'click', 'q9a4');">30-39</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question9', 'click', 'q9a5');">
+                        <input type='radio' id='q9a5' name='agegroup' value='40-49' class='radiobtn'/><label for='q9a5'><a href="#section10" onClick="ga('send', 'event', 'Question9', 'click', 'q9a5');">40-49+</a></label>
+                    </div>
+                     <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question9', 'click', 'q9a6');">
+                        <input type='radio' id='q9a6' name='agegroup' value='50+' class='radiobtn'/><label for='q9a6'><a href="#section10" onClick="ga('send', 'event', 'Question9', 'click', 'q9a6');">50+</a></label>
+                    </div>
+
+        </div>
+        <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question9', 'click', 'q9a7');">
+            <input type='radio' id='q9a7' name='agegroup' class='radiobtn'/><label for='q9a7'><a href="#section10" onClick="ga('send', 'event', 'Question9', 'click', 'q9a7');">تخطي السؤال</a></label>
+        </div>
+        <div class="row justify-content-center" onClick="ga('send', 'event', 'Question9', 'click', 'q9a8');">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section16'" onClick="ga('send', 'event', 'Question9', 'click', 'q9a8');">تخطي هذه الرحلة</button>
+        </div>
+            </div>
+        </div>
+	</div>
+
+    <!--
+    Question 10
+    Input Radio Button Group Name - student
+    Answer 1 yes id -> q10a1
+    Answer 2 no  id -> q10a2
+    -->
+    <div class="section" data-anchor="section10">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 67%">
+                    <span>١٠ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 33%">
+                    <span>١٠ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">هل تريد معالج ذو خلفية وتخصص في LGBTQ +؟</h2>
+            </div>
+            <div class="ttext col-12 pb-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question10', 'click', 'q10a1');">
+                        <input type='radio' id='q10a1' name='student' value='yes' class='radiobtn'/><label for='q10a1'><a href="#section11" onClick="ga('send', 'event', 'Question10', 'click', 'q10a1');">نعم </a></label>
+                    </div>
+                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question10', 'click', 'q10a2');">
+                        <input type='radio' id='q10a2' name='student' value='no' class='radiobtn'/><label for='q10a2'><a href="#section11" onClick="ga('send', 'event', 'Question10', 'click', 'q10a2');">لا</a></label>
+                    </div>
+        </div>
+        <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question10', 'click', 'q10a3');">
+            <input type='radio' id='q10a3' name='student' value='skip' class='radiobtn'/><label for='q10a3'><a href="#section11" onClick="ga('send', 'event', 'Question10', 'click', 'q10a3');">تخطي السؤال</a></label>
+        </div>
+        <div class="row justify-content-center" onClick="ga('send', 'event', 'Question10', 'click', 'q10a4');">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section16'" onClick="ga('send', 'event', 'Question10', 'click', 'q10a4');">تخطي هذه الرحلة</button>
+        </div>
+            </div>
+        </div>
+	</div>
+
+
+
+    <!--
+    Question 11
+    Input Radio Button Group Name - depressed
+    Answer 1 Never id -> q10a1
+    Answer 2 Occasionally  id -> q11a2
+    Answer 3 Half of the time id -> q11a3
+    Answer 4 Most of the time  id -> q11a4
+    Answer 5 >All of the time id -> q11a5
+    -->
+
+    <div class="section" data-anchor="section11">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 73.6%">
+                    <span>١١ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 26.4%">
+                    <span>١١ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">خلال الأيام السبعة الماضية ، هل شعرت بما يلي: هل شعرت بالإحباط أو الاكتئاب أو اليأس؟</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question11', 'click', 'q11a1');">
+                        <input type='radio' id='q11a1' name='depressed' value='Never' class='radiobtn'/><label for='q11a1'><a href="#section12" onClick="ga('send', 'event', 'Question11', 'click', 'q11a1');"> أبدا </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question11', 'click', 'q11a2');">
+                        <input type='radio' id='q11a2' name='depressed' value='Occasionally' class='radiobtn'/><label for='q11a2'><a href="#section12" onClick="ga('send', 'event', 'Question11', 'click', 'q11a2');">من حين اخر</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question11', 'click', 'q11a3');">
+                        <input type='radio' id='q11a3' name='depressed' value='Half' class='radiobtn'/><label for='q11a3'><a href="#section12" onClick="ga('send', 'event', 'Question11', 'click', 'q11a3');">نصف الوقت</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question11', 'click', 'q11a4');">
+                        <input type='radio' id='q11a4' name='depressed' value='Most' class='radiobtn'/><label for='q11a4'><a href="#section12" onClick="ga('send', 'event', 'Question11', 'click', 'q11a4');">معظم الوقت</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question11', 'click', 'q11a5');">
+                        <input type='radio' id='q11a5' name='depressed' value='All' class='radiobtn'/><label for='q11a5'><a href="#section12" onClick="ga('send', 'event', 'Question11', 'click', 'q11a5');">كل الوقت</a></label>
+                    </div>
+                </div>
+
+        <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question11', 'click', 'q11a6');">
+            <input type='radio' id='q11a6' name='depressed' class='radiobtn'/><label for='q11a6'><a href="#section12" onClick="ga('send', 'event', 'Question11', 'click', 'q11a6');">تخطي السؤال</a></label>
+        </div>
+        <div class="row justify-content-center" onClick="ga('send', 'event', 'Question11', 'click', 'q11a7');">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section16'" onClick="ga('send', 'event', 'Question11', 'click', 'q11a7');">تخطي هذه الرحلة</button>
+        </div>
+            </div>
+        </div>
+	</div>
+
+    <!--
+    Question 12
+    Input Radio Button Group Name - anxious
+    Answer 1 Never id -> q12a1
+    Answer 2 Occasionally  id -> q12a2
+    Answer 3 Half of the time id -> q12a3
+    Answer 4 Most of the time  id -> q12a4
+    Answer 5 >All of the time id -> q12a5
+    -->
+    <div class="section" data-anchor="section12">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 80%">
+                    <span>١٢ من١٥ </span>
+                  </div>
+                  <div class="bar negative" style="width: 20%">
+                    <span>١٢ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">في الأيام السبعة الماضية ، هل شعرت بالقلق أو القلق أو العصبي؟</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question12', 'click', 'q12a1');">
+                        <input type='radio' id='q12a1' name='anxious' value='Never' class='radiobtn'/><label for='q12a1'><a href="#section13" onClick="ga('send', 'event', 'Question12', 'click', 'q12a1');"> أبدا </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question12', 'click', 'q12a2');">
+                        <input type='radio' id='q12a2' name='anxious' value='Occasionally' class='radiobtn'/><label for='q12a2'><a href="#section13" onClick="ga('send', 'event', 'Question12', 'click', 'q12a2');">من حين اخر</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question12', 'click', 'q12a3');">
+                        <input type='radio' id='q12a3' name='anxious' value='Half' class='radiobtn'/><label for='q12a3'><a href="#section13" onClick="ga('send', 'event', 'Question12', 'click', 'q12a3');">نصف الوقت</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question12', 'click', 'q12a4');">
+                        <input type='radio' id='q12a4' name='anxious' value='Most' class='radiobtn'/><label for='q12a4'><a href="#section13" onClick="ga('send', 'event', 'Question12', 'click', 'q12a4');">معظم الوقت</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question12', 'click', 'q12a5');">
+                        <input type='radio' id='q12a5' name='anxious' value='All' class='radiobtn'/><label for='q12a5'><a href="#section13" onClick="ga('send', 'event', 'Question12', 'click', 'q12a5');">كل الوقت</a></label>
+                    </div>
+
+        </div>
+        <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question12', 'click', 'q12a6');">
+            <input type='radio' id='q12a6' name='anxious' class='radiobtn'/><label for='q12a6'><a href="#section13" onClick="ga('send', 'event', 'Question12', 'click', 'q12a6');">تخطي السؤال</a></label>
+        </div>
+        <div class="row justify-content-center" onClick="ga('send', 'event', 'Question12', 'click', 'q12a7');">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section16'" onClick="ga('send', 'event', 'Question12', 'click', 'q12a7');">تخطي هذه الرحلة</button>
+        </div>
+            </div>
+        </div>
+	</div>
+
+    <!--
+    Question 13
+    Input Radio Button Group Name - tense
+    Answer 1 Never id -> q13a1
+    Answer 2 Occasionally  id -> q13a2
+    Answer 3 Half of the time id -> q13a3
+    Answer 4 Most of the time  id -> q13a4
+    Answer 5 >All of the time id -> q13a5
+    -->
+    <div class="section" data-anchor="section13">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb- 4">
+                  <div class="bar positive" style="width: 87%">
+                    <span>١٣ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 13%">
+                    <span>١٣ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">في الأيام السبعة الماضية ، هل شعرت: شعرت بتوتر العضلات ، أو شعرت على الحافة أو بالضيق ، أو كنت تواجه صعوبة في الاسترخاء أو صعوبة النوم؟</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question13', 'click', 'q13a1');">
+                        <input type='radio' id='q13a1' name='tense' value='Never' class='radiobtn'/><label for='q13a1'><a href="#section14" onClick="ga('send', 'event', 'Question13', 'click', 'q13a1');"> أبدا </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question13', 'click', 'q13a2');">
+                        <input type='radio' id='q13a2' name='tense' value='Occasionally' class='radiobtn'/><label for='q13a2'><a href="#section14" onClick="ga('send', 'event', 'Question13', 'click', 'q13a2');"> من حين اخر </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question13', 'click', 'q13a3');">
+                        <input type='radio' id='q13a3' name='tense' value='Half' class='radiobtn'/><label for='q13a3'><a href="#section14" onClick="ga('send', 'event', 'Question13', 'click', 'q13a3');">نصف الوقت</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question13', 'click', 'q13a4');">
+                        <input type='radio' id='q13a4' name='tense' value='Most' class='radiobtn'/><label for='q13a4'><a href="#section14" onClick="ga('send', 'event', 'Question13', 'click', 'q13a4');">معظم الوقت</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question13', 'click', 'q13a5');">
+                        <input type='radio' id='q13a5' name='tense' value='All' class='radiobtn'/><label for='q13a5'><a href="#section14" onClick="ga('send', 'event', 'Question13', 'click', 'q13a5');">كل الوقت</a></label>
+                    </div>
+                </div>
+
+        <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question13', 'click', 'q13a6');">
+            <input type='radio' id='q13a6' name='tense' class='radiobtn'/><label for='q13a6'><a href="#section14" onClick="ga('send', 'event', 'Question13', 'click', 'q13a6');">تخطي السؤال</a></label>
+        </div>
+        <div class="row justify-content-center" onClick="ga('send', 'event', 'Question13', 'click', 'q13a7');">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section16'" onClick="ga('send', 'event', 'Question13', 'click', 'q13a7');">تخطي هذه الرحلة</button>
+        </div>
+            </div>
+        </div>
+	</div>
+
+    <!--
+    Question 14
+    Input Radio Button Group Name - time
+    Answer 1 1-5days id -> q14a1
+    Answer 2 1-5weeks  id -> q14a2
+    Answer 3 1-5months id -> q14a3
+    Answer 6-12months  id -> q14a4
+    Answer 5 >1yr -> q14a5
+    -->
+    <div class="section" data-anchor="section14">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 93.7%">
+                    <span>١٤ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 6.3%">
+                    <span>١٤ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">منذ متى وشعرت بهذه الطريقة؟</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question14', 'click', 'q14a1');">
+                        <input type='radio' id='q14a1' name='time' value='Days' class='radiobtn'/><label for='q14a1'><a href="#section15" onClick="ga('send', 'event', 'Question14', 'click', 'q14a1');"> 1-5 أيام </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question14', 'click', 'q14a2');">
+                        <input type='radio' id='q14a2' name='time' value='Weeks' class='radiobtn'/><label for='q14a2'><a href="#section15" onClick="ga('send', 'event', 'Question14', 'click', 'q14a2');">1-5 أسابيع</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question14', 'click', 'q14a3');">
+                        <input type='radio' id='q14a3' name='time' value='Months' class='radiobtn'/><label for='q14a3'><a href="#section15" onClick="ga('send', 'event', 'Question14', 'click', 'q14a3');">1-5 أشهر</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question14', 'click', 'q14a4');">
+                        <input type='radio' id='q14a4' name='time' value='6Months' class='radiobtn'/><label for='q14a4'><a href="#section15" onClick="ga('send', 'event', 'Question14', 'click', 'q14a4');">6-12 أشهر</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question14', 'click', 'q14a5');">
+                        <input type='radio' id='q14a5' name='time' value='Year' class='radiobtn'/><label for='q14a5'><a href="#section15" onClick="ga('send', 'event', 'Question14', 'click', 'q14a5');">>1 سنة</a></label>
+                    </div>
+                </div>
+
+        <div class="col-md-12 smallbox" onClick="ga('send', 'event', 'Question14', 'click', 'q14a6');">
+            <input type='radio' id='q14a6' name='time' class='radiobtn'/><label for='q14a6'><a href="#section15" onClick="ga('send', 'event', 'Question14', 'click', 'q14a6');">تخطي السؤال</a></label>
+        </div>
+        <div class="row justify-content-center" onClick="ga('send', 'event', 'Question14', 'click', 'q14a7');">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn"  onclick="window.location.href='#section16'" onClick="ga('send', 'event', 'Question14', 'click', 'q14a7');">تخطي هذه الرحلة</button>
+        </div>
+            </div>
+        </div>
+	</div>
+
+    <!--
+    Question 15
+    Input Radio Button Group Name - booking
+    Answer 1 Morning id -> q15a1
+    Answer 2 Noonish  id -> q15a2
+    Answer 3 Afternoon id -> q15a3
+    Answer 4 Evening  id -> q15a4
+    Answer 5 Weekends -> q15a5
+    -->
+    <div class="section" data-anchor="section15">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 100%">
+                    <span>١٥ من ١٥</span>
+                  </div>
+                  <div class="bar negative" style="width: 0%">
+                    <span>١٥ من ١٥</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+	                <h2 class="heading-h2">هل سبق لك أن ذهبت إلى معالج؟</h2>
+	            </div>
+	            <div class="ttext col-12">
+	                <div class="row justify-content-center">
+	                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question1', 'click', 'q15a1');">
+	                        <input type='radio' id='q15a1' name='notfirsttime' value='yes' class='radiobtn'/>
+	                        <label for="q15a1" href="#section16">
+	                            <a href="#section16" onClick="ga('send', 'event', 'Question1', 'click', 'q15a1');">نعم</a>
+	                        </label>
+	                    </div>
+	                    <div class="col-md-12 largebox" onClick="ga('send', 'event', 'Question1', 'click', 'q15a2');">
+	                        <input type='radio' id='q15a2' name='notfirsttime' value='no' class='radiobtn'/><label for='q15a2'><a href="#section16" onClick="ga('send', 'event', 'Question1', 'click', 'q15a2');">لا</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center" onClick="ga('send', 'event', 'Question15', 'click', 'q15a3');">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section16'" onClick="ga('send', 'event', 'Question15', 'click', 'q15a3');">تخطي السؤال</button>
+        </div>
+	</div>
+
+    <!-- Qs 16 -->
+    <div class="section" data-anchor="section16">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="heading-h2">سيتم الأن نقلك الى الأطباء او البرامج. الالعلاج الأنسب لاحتياجاتك و ميزانيتك.<br />
+				هنا سوف يكون في أمكانك اختيار البرنامج المفضل لك/ي وحجز موعد</h2>            </div>
+            <input type="hidden" id="location" name="location" value="0" />
+            <div class="col-12">
+                <button type="submit" class="btn btn-lg" style="background-color: #66a5d7; border: solid thin white;"> توصيلي!</button>
+            </div>
+        </div>
+	</div>
+
+    <div>
+
+    </div>
+</div>
+</form>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <!-- Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--   <script src="questions-js/questions.js"></script>-->
+    <script src="FullPage/jquery.fullpage.js"></script>
+    <script type="text/javascript" src="FullPage/vendors/scrolloverflow.js"></script>
+    <script type="text/javascript" src="FullPage/examples.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                fitToSection: true,
+                anchors: ['section0','section1', 'covered','section2', 'interventionsection', 'section3', 'section4', 'section5', 'section6','section7','section8', 'section9', 'section10', 'section11', 'section12', 'section13', 'section14','section15','section16']
+            });
+            $.fn.fullpage.setAllowScrolling(false, 'up, down');
+            $.fn.fullpage.setKeyboardScrolling(false, 'up, down');
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-116818382-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'event', 'Question1', 'click', 'q1a1');
+    ga('send', 'event', 'Question1', 'click', 'q1a2');
+    ga('send', 'event', 'Question1', 'click', 'q1a1');
+    </script>
+
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
+    <!-- To Generate Current Year in Footer -->
+    <script>
+    new Vue({
+      el: '.footer-copyright',
+    });
+    </script>
+
+<script>
+
+    $('#questions-form').on('submit', function(event){
+        var elements = $('form').serializeArray();
+        var obj ={};
+        for(var i = 0 ; i < elements.length ; i++){
+            var item = elements[i];
+            obj[item.name] = item.value;
+        }
+
+        obj["location"] = window.location.search.substr(1).split("=")[1];
+        document.getElementById("location").value = obj["location"];
+
+        var body = JSON.stringify(obj);
+
+        console.log(obj);
+        $.ajax({
+            type: 'POST',
+            url: 'https://linkmentalhealthmongo.herokuapp.com/api/answers',
+            dataType: 'json',
+            data: body,
+            contentType : 'application/json',
+            success: function(data) {
+                // window.location.replace("http://linkmentalhealthmongo.herokuapp.com");
+
+            }
+
+        });
+
+        // return false;
+    });
+</script>
+
+    <script>
+    $(".largebox input").click(function(){
+         window.location=$(this).parent().find("a").attr("href");
+         return false;
+    });
+
+    $(".smallbox input").click(function(){
+         window.location=$(this).parent().find("a").attr("href");
+         return false;
+    });
+
+    $("label").click(function(){
+        var $radio = $(this);
+        // if this was not checked
+        if ($radio.siblings('input[type="radio"]').prop('checked') == false)
+        {
+            $radio.siblings('input[type="radio"]').prop('checked', true);
+        }
+        // else if it was checked then uncheck it
+        else{
+            $radio.siblings('input[type="radio"]').prop('checked', false);
+        }
+    });
+    </script>
+
+    <script>
+        function confirmcheckbox(){
+            console.log($('#terms').is(":checked"));
+            if(!$('#terms').is(":checked")) {
+                swal({
+                  text: "Please agree to the Terms and Conditions",
+                  icon: "warning",
+                });
+              $('#terms').focus();
+              return false;
+            }
+            else{
+                window.location.hash = 'section1';
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>

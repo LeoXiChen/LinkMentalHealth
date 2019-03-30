@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MF7334J');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LinkMentalHealth</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/questions.css">
+    <!-- Fullpage.js library -->
+    <link rel="stylesheet" href="FullPage/jquery.fullpage.css" href="questionnaire.html" title="questionnaire">
+    <!-- Dont remove below code - bug fix for IE -->
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+    
+    <!-- Vue.js production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+    <title>LinkMentalHealth - Questionnaire</title>
+</head>
+    
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+	    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF7334J"
+	            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+<div id="header">
+    <nav class="navbar navbar-expand-lg navbar-light grey lighten-5">
+        <a class="navbar-brand" href="home.html"><img src="img/logo.png" height="45px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <span class="navbar-text">
+                <button class="btn btn-sm btn-outline-elegant" onclick="window.location.href='home.html'">Back Home</button>
+                <button class="btn btn-sm btn-outline-elegant">Login</button>
+                <button class="btn btn-sm btn-outline-elegant">Register</button>
+                <button class="btn btn-sm btn-elegant"><a href="therapist_questionnaire.html" style="color: white;">FOR THERAPISTS</a></button>
+            </span>
+        </div>
+    </nav>
+</div>
+<div id="footer">        
+    <!--Copyright-->
+    <div class="col-12 footer-copyright py-3 text-center">
+        © {{ new Date().getFullYear() }} Copyright:<a href="home.html"> LinkMentalHealth </a>
+    </div>
+    <!--/.Copyright-->
+</div>
+
+<form id="questions-form" action="results.html" method="GET">
+<div id="fullpage">
+	<div class="section" data-anchor="section0">
+        <div class="intro">
+            <div class="intro-div row p-4 text-left">
+                <h3 class="ttext col-12">
+                You are now being taken to a 90 second survey currently in pilot. The more questions you answer, the better your therapist match, but you can skip after 5 questions if want to jump straight to a list of therapists. </h3>
+                <h3 class="ttext col-12 text-center" style="font-size: 12pt;">Please read and agree to our <a href="privacy.html" style="color:blue; text-decoration: underline;">Terms and Conditions and Privacy</a> for details on how we secure your data before you proceed.
+                </h3>
+                
+                <div class="col text-center">
+                    <p class="col-12"><input type="checkbox" name="terms" id="terms"> I Agree</p>
+                    <button class="btn text-center" type="button" aria-pressed="true" style="background-color: #fbbb37;" onclick="confirmcheckbox();">CONTINUE</button>
+                </div>
+            </div>
+
+		</div>
+	</div>
+    <!--Question 1
+    Input Radio Button Group Name - notfirsttime
+    Answer 1 yes id -> q1a1
+    Answer 2 no  id -> q1a2
+    -->
+	<div class="section" data-anchor="section1">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 6.7%">
+                    <span>1 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 93.3%">
+                    <span>1 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">Have you previously gone to a therapist?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q1a1' name='notfirsttime' value='yes' class='radiobtn'/>
+                        <label for="q1a1" href="#section2">
+                            <a href="#section2" onClick="ga('send', 'event', 'Question1', 'click', 'q1a1');">YES</a>
+                        </label>
+                    </div>
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q1a2' name='notfirsttime' value='no' class='radiobtn'/><label for='q1a2'><a href="#section2" onClick="ga('send', 'event', 'Question1', 'click', 'q1a2');">NO</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <!-- 
+    Question 2
+    Input Radio Button Group Name - suicide
+    Answer 1 yes id -> q2a1
+    Answer 2 no  id -> q2a2
+    -->
+    <div class="section" data-anchor="section2">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 13.3%">
+                    <span>2 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 86.7%">
+                    <span>2 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">Are you currently experiencing urgent suicidal thoughts?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q2a1' name='suicide' value='yes' class='radiobtn'/><label for='q2a1'><a href="#interventionsection" onClick="ga('send', 'event', 'Question2', 'click', 'q2a1');">YES</a></label>
+                    </div>
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q2a2' name='suicide' value='no' class='radiobtn'/><label for='q2a2'><a href="#section3" onClick="ga('send', 'event', 'Question2', 'click', 'q2a2');">NO</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    
+    <!-- Intervention Section -->
+    <div class="section" data-anchor="interventionsection">
+		<div class="">
+            <div class="row justify-content-center">
+                <div class='heading-h2 col-12'>If you have plans or urgent suicidal thoughts, please know you are not alone. <hr/>Please visit your nearest emergency room or call:</div>
+                <div class='heading-h2 col-12'><strong>ONTARIO MENTAL HEALTH HELPLINE</strong>
+                </div>
+                <div class='col-md-4 col-8'>
+                    <div class="p-4" style="border:solid thin; font-weight: bold; font-size: 16pt;">
+                    <a href="tel:1-866-531-2600"><strong>1-866-531-2600</strong></a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <a href="#section3" class="btn text-center" role="button" aria-pressed="true" style="background-color: #fbbb37;">CONTINUE TO QUESTIONNAIRE</a>
+                </div>
+            </div>
+		</div>
+	</div>
+    
+    <!--
+    /*Question 3
+    Input Radio Button Group Name - insurance
+    Answer 1 yes id -> q3a1
+    Answer 2 no  id -> q3a2
+    */
+    -->
+    
+    <div class="section" data-anchor="section3">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 20%">
+                    <span>3 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 80%">
+                    <span>3 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">Do you have health insurance?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q3a1' name='insurance' value='yes' class='radiobtn'/><label for='q3a1'><a href="#section4" onClick="ga('send', 'event', 'Question3', 'click', 'q3a1');">YES</a></label>
+                    </div>
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q3a2' name='insurance' value='no' class='radiobtn'/><label for='q3a2'><a href="#section5" onClick="ga('send', 'event', 'Question3', 'click', 'q3a2');">NO</a></label>
+	                    <div class="col-md-12 largebox">
+	                        <input type='radio' id='q3a3' name='insurance' value='not sure' class='radiobtn'/><label for='q3a3'><a href="#section5" onClick="ga('send', 'event', 'Question3', 'click', 'q3a3');">NOT SURE</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    </div>
+    <!--
+    /*Question 4
+    Input Radio Button Group Name - insuranceprovider
+    Answer 1 manulife id -> q4a1
+    Answer 2 sunlife  id -> q4a2
+    Answer 3 greatwest id -> q4a3
+    Answer 4 bluecross  id -> q4a4
+    Answer 5 gsc id -> q4a5
+    Answer 6 other  id -> q4a6
+    */
+    -->
+    <div class="section" data-anchor="section4">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 26.7%">
+                    <span>4 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 73.3%">
+                    <span>4 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">What insurance provider do you have?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                            <div class="col-md-12 smallbox">
+                                <input type='radio' id='q4a1' name='insuranceprovider' value='MANULIFE' class='radiobtn'/><label for='q4a1'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a1');">MANULIFE</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox">
+                                <input type='radio' id='q4a2' name='insuranceprovider' value='SUNLIFE' class='radiobtn'/><label for='q4a2'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a2');">SUNLIFE</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox">
+                                <input type='radio' id='q4a3' name='insuranceprovider' value='GREATWEST' class='radiobtn'/><label for='q4a3'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a3');">GREATWEST</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox">
+                                <input type='radio' id='q4a4' name='insuranceprovider' value='BLUECROSS' class='radiobtn'/><label for='q4a4'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a4');">BLUECROSS</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox">
+                                <input type='radio' id='q4a5' name='insuranceprovider' value='GSC' class='radiobtn'/><label for='q4a5'><a href="#section5" nClick="ga('send', 'event', 'Question5', 'click', 'q4a5');">GREEN SHIELD CANADA</a></label>
+                            </div>
+                            <div class="col-md-12 smallbox">
+                                <input type='radio' id='q4a6' name='insuranceprovider' value='OTHER' class='radiobtn'/><label for='q4a6'><a href="#section5" onClick="ga('send', 'event', 'Question4', 'click', 'q4a6');">OTHER</a></label>
+                            </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <!--
+    /*Question 5
+    Input Radio Button Group Name - agegroup
+    Answer 1 <12 id -> q5a1
+    Answer 2 13-17  id -> q5a2
+    Answer 3 18-23 id -> q5a3
+    Answer 4 24-29  id -> q5a4
+    Answer 5 30+ id -> q5a5
+    */
+    -->
+    
+    <div class="section" data-anchor="section5">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 33.3%">
+                    <span>5 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 66.7%">
+                    <span>5 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">How old are you ?</h2>
+            </div>
+            <div class="ttext col-12 smallbox">
+                <div class="row justify-content-center"> 
+                    <div class="col-md-12">
+                        <input type='radio' id='q5a1' name='agegroup' value='<13' class='radiobtn'/><label for='q5a1'><a href="#section6"> &le; 13 </a></label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type='radio' id='q5a2' name='agegroup' value='13-17' class='radiobtn'/><label for='q5a2'><a href="#section6">13-17</a></label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type='radio' id='q5a3' name='agegroup' value='18-29' class='radiobtn'/><label for='q5a3'><a href="#section6">18-29</a></label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type='radio' id='q5a4' name='agegroup' value='30-39' class='radiobtn'/><label for='q5a4'><a href="#section6">30-39</a></label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type='radio' id='q5a5' name='agegroup' value='40-49' class='radiobtn'/><label for='q5a5'><a href="#section6">40-49+</a></label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type='radio' id='q5a6' name='agegroup' value='50+' class='radiobtn'/><label for='q5a6'><a href="#section6">50+</a></label>
+                    </div>					
+                </div>
+            </div>
+        </div>
+	</div>
+    <!-- 
+    Question 6
+    Input Radio Button Group Name - student
+    Answer 1 yes id -> q6a1
+    Answer 2 no  id -> q6a2
+    -->
+    <div class="section" data-anchor="section6">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 40%">
+                    <span>6 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 60%">
+                    <span>6 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">Do you want a therapist with background and specialization in LGBTQ+?</h2>
+            </div>
+            <div class="ttext col-12 pb-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q6a1' name='student' value='yes' class='radiobtn'/><label for='q6a1'><a href="#section7">YES</a></label>
+                    </div>
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q6a2' name='student' value='no' class='radiobtn'/><label for='q6a2'><a href="#section7">NO</a></label>
+                    </div>
+                    <div class="col-md-12 largebox">
+                        <input type='radio' id='q6a3' name='student' value='no' class='radiobtn'/><label for='q6a2'><a href="#section7">SKIP THIS QUESITON</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!--
+    Question 7
+    Input Radio Button Group Name - income
+    Answer 1 <$20,000 id -> q7a1
+    Answer 2 $20,000-$35,000  id -> q7a2
+    Answer 3 $36,000-$60,000 id -> q7a3
+    Answer 4 $60,000-$100,000  id -> q7a4
+    Answer 5 >$100,000 id -> q7a5
+    -->
+    
+    <div class="section" data-anchor="section7">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 46.7%">
+                    <span>7 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 53.3%">
+                    <span>7 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">We want to find out if you qualify for affordable or government funded therapy programs so we can share them with you, please let us know your income bracket.</h2>
+            </div>
+           <div class="ttext col-12"> 
+               <div class="row justify-content-center">
+                   <div class="col-md-12 smallbox ">
+                       <input type='radio' id='q7a1' name='income' value='<$30,000' class='radiobtn'/><label for='q7a1'><a href="#section8"> &lt;40,000 </a></label>
+                   </div>
+                   <div class="col-md-12 smallbox ">
+                       <input type='radio' id='q7a2' name='income' value='$30,000-$60,000' class='radiobtn'/><label for='q7a2'><a href="#section8">$40,000-$60,000</a></label>
+                   </div>
+                   <div class="col-md-12 smallbox">
+                       <input type='radio' id='q7a3' name='income' value='$60,000-$100,000' class='radiobtn'/><label for='q7a3'><a href="#section8">$60,000-$100,000 </a></label>
+                   </div>
+                   <div class="col-md-12 smallbox">
+                       <input type='radio' id='q7a4' name='income' value='$100,000+' class='radiobtn'/><label for='q7a4'><a href="#section8">>$100,000+</a></label>
+                   </div>
+           
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q7a5' name='income' class='radiobtn'/><label for='q7a5'><a href="#section8">SKIP QUESTION</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!-- 
+    Question 8
+    Input Radio Button Group Name - gender
+    Answer 1 male id -> q8a1
+    Answer 2 female  id -> q8a2
+    Answer 3 Irrelevant id -> q8a3
+    -->
+    
+    <div class="section" data-anchor="section8">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 53.3%">
+                    <span>8 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 46.7%">
+                    <span>8 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">Do you have a preference related to the gender of your therapist?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q8a1' name='gender' value='Male' class='radiobtn'/><label for='q8a1'><a href="#section9">MALE</a></label>                 
+                    </div>
+                    <div class="col-md-12 smallbox">
+                         <input type='radio' id='q8a2' name='gender' value='Female' class='radiobtn'/><label for='q8a2'><a href="#section9">FEMALE</a></label>                   
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q8a3' name='gender' value='Irrelevant' class='radiobtn'/><label for='q8a3'><a href="#section9">NO PREFERENCE</a></label>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!--
+    Question 9
+    Input Radio Button Group Name - religion
+    Answer 1 Christian id -> q9a1
+    Answer 2 Muslim  id -> q9a2
+    Answer 3 Jewish id -> q9a3
+    Answer 4 Spiritual  id -> q9a4
+    Answer 5 >Not Religious id -> q9a5
+    -->
+    
+    <div class="section" data-anchor="section9">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 60%">
+                    <span>9 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 40%">
+                    <span>9 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">Do you want to add a religious part to your therapy? Please choose the religion applicable to you.</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9a1' name='religion' value='Christian' class='radiobtn'/><label for='q9a1'><a href="#section9a">CHRISTIAN</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9a2' name='religion' value='Muslim' class='radiobtn'/><label for='q9a2'><a href="#section9a">MUSLIM</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9a3' name='religion' value='Jewish' class='radiobtn'/><label for='q9a3'><a href="#section9a">JEWISH</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9a4' name='religion' value='Spiritual' class='radiobtn'/><label for='q9a4'><a href="#section9a">SPIRITUAL</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9a5' name='religion' value='Not Religious' class='radiobtn'/><label for='q9a5'><a href="#section9a">NO PREFERENCE</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!--
+    Question 9a (This question is a new addition therefore named it 9a instead of messing up the entire sequence)
+    Input Radio Button Group Name - lang
+    Answer 1 English id -> q9aa1
+    Answer 2 French  id -> q9aa2
+    Answer 3 Arabic id -> q9aa3
+    Answer 4 Urdu  id -> q9aa4
+    Answer 5 >Hindi id -> q9aa5
+    -->
+    
+    <div class="section" data-anchor="section9a">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 66.7%">
+                    <span>10 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 33.3%">
+                    <span>10 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">What language would you like therapy to be administered in?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9aa1' name='lang' value='English' class='radiobtn'/><label for='q9aa1'><a href="#section10">ENGLISH</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9aa2' name='lang' value='French' class='radiobtn'/><label for='q9aa2'><a href="#section10">FRENCH</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9aa3' name='lang' value='Arabic' class='radiobtn'/><label for='q9aa3'><a href="#section10">ARABIC</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9aa4' name='lang' value='Urdu' class='radiobtn'/><label for='q9aa4'><a href="#section10">URDU</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q9aa5' name='lang' value='Hindi' class='radiobtn'/><label for='q9aa5'><a href="#section10">HINDI</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!-- 
+    Question 10
+    Input Radio Button Group Name - depressed
+    Answer 1 Never id -> q10a1
+    Answer 2 Occasionally  id -> q10a2
+    Answer 3 Half of the time id -> q10a3
+    Answer 4 Most of the time  id -> q10a4
+    Answer 5 >All of the time id -> q10a5
+    -->
+    
+    <div class="section" data-anchor="section10">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 73.3%">
+                    <span>11 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 26.7%">
+                    <span>11 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">In the last seven days, have you: been feeling down, depressed, or hopeless?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q10a1' name='depressed' value='Never' class='radiobtn'/><label for='q10a1'><a href="#section11"> NEVER </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q10a2' name='depressed' value='Occasionally' class='radiobtn'/><label for='q10a2'><a href="#section11">OCCASIONALLY</a></label>                       
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q10a3' name='depressed' value='Half' class='radiobtn'/><label for='q10a3'><a href="#section11">HALF OF THE TIME</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q10a4' name='depressed' value='Most' class='radiobtn'/><label for='q10a4'><a href="#section11">MOST OF THE TIME</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q10a5' name='depressed' value='All' class='radiobtn'/><label for='q10a5'><a href="#section11">ALL OF THE TIME</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!-- 
+    Question 11
+    Input Radio Button Group Name - anxious
+    Answer 1 Never id -> q11a1
+    Answer 2 Occasionally  id -> q11a2
+    Answer 3 Half of the time id -> q11a3
+    Answer 4 Most of the time  id -> q11a4
+    Answer 5 >All of the time id -> q11a5
+    -->
+    <div class="section" data-anchor="section11">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 80%">
+                    <span>12 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 20%">
+                    <span>12 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">In the last seven days, have you: felt anxious, worried, or nervous?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q11a1' name='anxious' value='Never' class='radiobtn'/><label for='q11a1'><a href="#section12"> NEVER </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q11a2' name='anxious' value='Occasionally' class='radiobtn'/><label for='q11a2'><a href="#section12">OCCASIONALLY</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q11a3' name='anxious' value='Half' class='radiobtn'/><label for='q11a3'><a href="#section12">HALF OF THE TIME</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q11a4' name='anxious' value='Most' class='radiobtn'/><label for='q11a4'><a href="#section12">MOST OF THE TIME</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q11a5' name='anxious' value='All' class='radiobtn'/><label for='q11a5'><a href="#section12">ALL OF THE TIME</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!--
+    Question 12
+    Input Radio Button Group Name - tense
+    Answer 1 Never id -> q12a1
+    Answer 2 Occasionally  id -> q12a2
+    Answer 3 Half of the time id -> q12a3
+    Answer 4 Most of the time  id -> q12a4
+    Answer 5 >All of the time id -> q12a5
+    -->
+    <div class="section" data-anchor="section12">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 86.7%">
+                    <span>13 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 13.3%">
+                    <span>13 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">In the last seven days, have you: felt tense muscles, felt on edge or restless, or had trouble relaxing or trouble sleeping?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q12a1' name='tense' value='Never' class='radiobtn'/><label for='q12a1'><a href="#section13"> NEVER </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q12a2' name='tense' value='Occasionally' class='radiobtn'/><label for='q12a2'><a href="#section13"> OCCASIONALLY </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q12a3' name='tense' value='Half' class='radiobtn'/><label for='q12a3'><a href="#section13">HALF OF THE TIME</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q12a4' name='tense' value='Most' class='radiobtn'/><label for='q12a4'><a href="#section13">MOST OF THE TIME</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q12a5' name='tense' value='All' class='radiobtn'/><label for='q12a5'><a href="#section13">ALL OF THE TIME</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!-- 
+    Question 13
+    Input Radio Button Group Name - time
+    Answer 1 1-5days id -> q13a1
+    Answer 2 1-5weeks  id -> q13a2
+    Answer 3 1-5months id -> q13a3
+    Answer 6-12months  id -> q13a4
+    Answer 5 >1yr -> q13a5
+    -->
+    <div class="section" data-anchor="section13">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 93.3%">
+                    <span>14 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 6.7%">
+                    <span>14 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">How long have you felt this way?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q13a1' name='time' value='Days' class='radiobtn'/><label for='q13a1'><a href="#section14"> 1-5days </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q13a2' name='time' value='Weeks' class='radiobtn'/><label for='q13a2'><a href="#section14">1-5 weeks</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q13a3' name='time' value='Months' class='radiobtn'/><label for='q13a3'><a href="#section14">1-5months</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q13a4' name='time' value='6Months' class='radiobtn'/><label for='q13a4'><a href="#section14">6-12months</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q13a5' name='time' value='Year' class='radiobtn'/><label for='q13a5'><a href="#section14">>1year</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!--
+    Question 14
+    Input Radio Button Group Name - booking
+    Answer 1 Morning id -> q14a1
+    Answer 2 Noonish  id -> q14a2
+    Answer 3 Afternoon id -> q14a3
+    Answer 4 Evening  id -> q14a4
+    Answer 5 Weekends -> q14a5
+    -->
+    <div class="section" data-anchor="section14">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="progress-bar mb-4">
+                  <div class="bar positive" style="width: 100%">
+                    <span>15 out of 15</span>
+                  </div>
+                  <div class="bar negative" style="width: 0%">
+                    <span>15 out of 15</span>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2 class="heading-h2">Do you have a preferred time to see a therapist?</h2>
+            </div>
+            <div class="ttext col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q14a1' name='booking' value='Morning' class='radiobtn'/><label for='q14a1'><a href="#section15"> MORNING </a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q14a2' name='booking' value='Noonish' class='radiobtn'/><label for='q14a2'><a href="#section15">NOONISH</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q14a3' name='booking' value='Afternoon' class='radiobtn'/><label for='q14a3'><a href="#section15">AFTERNOON</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q14a4' name='booking' value='Evening' class='radiobtn'/><label for='q14a4'><a href="#section15">EVENING</a></label>
+                    </div>
+                    <div class="col-md-12 smallbox">
+                        <input type='radio' id='q14a5' name='booking' value='Weekends' class='radiobtn'/>
+                        <label for='q14a5'><a href="#section15">WEEKENDS</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-lg customyellow skipandmatchbtn" onclick="window.location.href='#section15'">SKIP AND MATCH</button>
+        </div>
+	</div>
+    
+    <!-- Qs 15 -->
+    <div class="section" data-anchor="section15">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="heading-h2">A confirmation will be sent to your e-mail once a booking is made</h2>
+            </div>
+            <div class="ttext col-10">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-8">
+                        <input type='email' id='email' name='email' class='form-control' placeholder="Enter Your Email" required/>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="location" name="location" value="0" />
+            <div class="col-12">
+                <button type="submit" class="btn btn-lg" style="background-color: #66a5d7; border: solid thin white;">MATCH NOW</button>
+            </div>
+        </div>
+	</div>
+    
+    <div>
+    
+    </div>
+</div>
+</form>
+    
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    
+    <!-- Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--   <script src="questions-js/questions.js"></script>-->
+    <script src="FullPage/jquery.fullpage.js"></script>
+    <script type="text/javascript" src="FullPage/vendors/scrolloverflow.js"></script>
+    <script type="text/javascript" src="FullPage/examples.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+
+                anchors: ['section0','section1', 'section2', 'interventionsection', 'section3', 'section4', 'section5', 'section6','section7','section8', 'section9', 'section9a', 'section10', 'section11', 'section12', 'section13','section14','section15']        
+            });
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-116818382-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'event', 'Question1', 'click', 'q1a1');
+    ga('send', 'event', 'Question1', 'click', 'q1a2');
+    ga('send', 'event', 'Question1', 'click', 'q1a1');
+    </script>
+    
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+    <!-- To Generate Current Year in Footer -->
+    <script>
+    new Vue({
+      el: '.footer-copyright',
+    });
+    </script>
+
+<script>
+
+    $('#questions-form').on('submit', function(event){
+        var elements = $('form').serializeArray();
+        var obj ={};
+        for(var i = 0 ; i < elements.length ; i++){
+            var item = elements[i];
+            obj[item.name] = item.value;
+        }
+
+        obj["location"] = window.location.search.substr(1).split("=")[1];
+        document.getElementById("location").value = obj["location"];
+
+        var body = JSON.stringify(obj);
+
+        console.log(obj);
+        $.ajax({
+            type: 'POST',
+            url: 'https://linkmentalhealthmongo.herokuapp.com/api/answers',
+            dataType: 'json',
+            data: body,
+            contentType : 'application/json',
+            success: function(data) {
+                // window.location.replace("http://linkmentalhealthmongo.herokuapp.com");
+
+            }
+
+        });
+
+        // return false;
+    });
+</script>
+    
+    <script>
+    $(".largebox").click(function(){
+         window.location=$(this).find("a").attr("href"); 
+         return false;
+    });
+        
+    $(".smallbox").click(function(){
+         window.location=$(this).find("a").attr("href"); 
+         return false;
+    });
+        
+    $("label").click(function(){
+        var $radio = $(this);
+        // if this was not checked
+        if ($radio.siblings('input[type="radio"]').prop('checked') == false)
+        {
+            $radio.siblings('input[type="radio"]').prop('checked', true);
+        }
+        // else if it was checked then uncheck it
+        else{
+            $radio.siblings('input[type="radio"]').prop('checked', false);
+        }
+    });    
+    </script>
+    
+    <script>
+        function confirmcheckbox(){
+            console.log($('#terms').is(":checked"));
+            if(!$('#terms').is(":checked")) {
+                swal({
+                  text: "Please agree to the Terms and Conditions",
+                  icon: "warning",
+                });
+              $('#terms').focus();
+              return false;
+            }
+            else{
+                window.location.hash = 'section1';
+            }
+        }
+    </script>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LinkMentalHealth</title>
+    <!-- SEO Tags-->
+    <meta name="description" content="LinkMentalHealth - Toronto, Ontario">
+    <meta name="keywords" content="Mental,Health,Wellness,Therapy,Therapists,Booking,Toronto,Mississauga,GTA,Services">
+    <meta name="author" content="LinkMentalHealth">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Vue.js production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF7334J"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="lang-buttons-mobile" class="row">
+    <div class="col-12">
+        <div class="text-center">
+            <span class="navbar-text">
+                <!-- Temporarily removed until feature will be added
+                <button class="btn btn-sm btn-outline-elegant">Login</button>
+                <button class="btn btn-sm btn-outline-elegant">Register</button>
+                -->
+                <button class="btn btn-sm btn-outline-elegant"><a href="">Français</a></button>
+            </span>
+            <span class="navbar-text">
+                <!-- Temporarily removed until feature will be added
+                <button class="btn btn-sm btn-outline-elegant">Login</button>
+                <button class="btn btn-sm btn-outline-elegant">Register</button>
+                -->
+                <button class="btn btn-sm btn-outline-elegant" onclick="window.location='home_ar.html'"><a href="home_ar.html">عربي</a></button>
+            </span>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light grey lighten-5">
+    <a class="navbar-brand" href="#"><img src="img/logo.png" height="45px;" alt="linkmentalhealth logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul id="menu" class="navbar-nav mr-auto pl-4 ml-4">
+            <li class="nav-item pl-3">
+                <a class="nav-link" href="#howitworks">How It Works</a>
+            </li>
+            <li class="nav-item pl-3">
+                <a class="nav-link" href="#howitstarted">Why Us?</a>
+            </li>
+            <li class="nav-item pl-3">
+                <a class="nav-link" href="#ourresources">Resources</a>
+            </li>
+            <li class="nav-item pl-3">
+                <a class="nav-link" href="#ourtherapists">Meet Some Therapists</a>
+            </li>
+            <li class="nav-item pl-3">
+                <a class="nav-link" href="advisroy-therapists.html">Meet Advisory Panel</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            <!-- Temporarily removed until feature will be added
+            <button class="btn btn-sm btn-outline-elegant">Login</button>
+            <button class="btn btn-sm btn-outline-elegant">Register</button>
+            -->
+            <button class="btn btn-sm btn-elegant" onclick="window.location='therapist_questionnaire.html'"><a style="color:white;" href="therapist_questionnaire.html">FOR THERAPISTS</a></button>
+        </span>
+        <div id="lang-buttons-desktop">
+            <span class="navbar-text">
+                <!-- Temporarily removed until feature will be added
+                <button class="btn btn-sm btn-outline-elegant">Login</button>
+                <button class="btn btn-sm btn-outline-elegant">Register</button>
+                -->
+                <button class="btn btn-sm btn-outline-elegant"><a href="">Français</a></button>
+            </span>
+            <span class="navbar-text">
+                <!-- Temporarily removed until feature will be added
+                <button class="btn btn-sm btn-outline-elegant">Login</button>
+                <button class="btn btn-sm btn-outline-elegant">Register</button>
+                -->
+                <button class="btn btn-sm btn-outline-elegant"><a href="home_ar.html">عربي</a></button>
+            </span>
+        </div>
+    </div>
+</nav>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div id="top" class="homepage-hero-module">
+    <div class="video-container">
+        <div class="title-container">
+            <div class="headline">
+				
+				<h3 class="h3-title w3-animate-opacity">Thank you for booking a therapist with LinkMentalHealth!<br/></h3>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="location-form" method="GET" action="questionnaire.html" class="needs-validation"
+                          novalidate>
+                        <div class="address-input-unit col">
+                            <i class="map-icon fa fa-map-marker"></i>
+                            <input type="text" class="form-control input-lg" id="locationTextField"
+                                   placeholder="Address or Postal Code" onFocus="geolocate()" required>
+                            <input type="hidden" id="mylocation" name="mylocation" value="0"/>
+                            <div class="invalid-feedback alert alert-danger" role="alert">
+                                Please provide a valid address.
+                            </div>
+                            <button type="submit" onclick="saveLocation()" class="btn" id="start-qs-btn">Link Me!
+                            </button>
+                        </div>
+                    </form>
+                    <script>
+                        function saveLocation() {
+                            var location = document.getElementById("location-form").elements[0].value;
+                            document.getElementById("mylocation").value = location;
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="filter"></div>
+        <img id="hero-img" src="img/background.png" alt="linkmentalhealth still background for mobiles"/>
+        <video id="video" muted autoplay loop class="fillWidth">
+			<source src="opening-video.mov" type="video/mp4">
+<!--            <source src="openingvideocompressed.webm" type="video/webm"> !-->
+        <!--    <source src="opening-video.mov" type="video/mp4">-->
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+    </div>
+</div>
+<div class="container-fluid pt-4" id="content">
+    <div id="howitworks" class="row pt-2">
+        <div class="col-12 pl-4 pb-2">
+            <h1 class="h1 font-weight-bold text-center mb-5 pt-4">How It Works</h1>
+            <hr style="border-color:black; color:black; background-color: black;"/>
+        </div>
+
+        <div class="col-md-4 pt-4 mt-4 steps">
+            <!--Card Narrower-->
+            <div class="card card-cascade narrower" style="background: url(img/blackbackground.svg);">
+
+                <!--Card image-->
+                <div class="view overlay rounded z-depth-2 text-center customyellow">
+                    <h1 class="text-center stepsh1">STEP 1</h1>
+                    <i class="fa fa-search pb-4" style="font-size:34pt;"></i>
+                </div>
+                <!--/Card image-->
+
+                <!--Card content-->
+                <div class="card-body text-center" style="height: 215px;">
+                    <!--Title-->
+                    <h4 class="card-title"
+                        style="color: whitesmoke;"><strong>Take Survey</strong>
+                    </h4>
+                    <p class="card-text pl-4 pb-4 pr-4" style="color: gainsboro; font-size: 13pt;"><a href="#top" style="color:aliceblue; text-decoration: underline;">Enter your postal code</a>, click "Link Me!", and you'll be directed to a 90 second researched questionnaire to help you find the right therapist or free program for you.</p>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card Narrower-->
+        </div>
+        <div class="col-md-4 pt-4 mt-4 steps">
+            <!--Card Narrower-->
+            <div class="card card-cascade narrower" style="background: url(img/blackbackground2.svg); ">
+
+                <!--Card image-->
+                <div class="view overlay rounded z-depth-2 text-center customyellow">
+                    <h1 class="text-center stepsh1">Step 2</h1>
+                    <i class="fa fa-desktop pb-4" style="font-size:34pt;"></i>
+                </div>
+                <!--/Card image-->
+
+                <!--Card content-->
+                <div class="card-body text-center" style="height: 215px;">
+                    <!--Title-->
+                    <h4 class="card-title"
+                        style="color: whitesmoke;"><strong>Get Matched</strong>
+                    </h4>
+                    <p class="card-text pl-4 pb-4 pr-4" style="color: gainsboro; font-size: 13pt;">Choose from a short list of therapists or mental health programs that best fit your needs and your budget.
+                    </p>
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card Narrower-->
+        </div>
+        <div class="col-md-4 pt-4 mt-4 steps">
+            <!--Card Narrower-->
+            <div class="card card-cascade narrower" style="background: url(img/blackbackground.svg);">
+
+                <!--Card image-->
+                <div class="view overlay rounded z-depth-2 text-center customyellow">
+                    <h1 class="text-center stepsh1">Step 3</h1>
+                    <i class="fa fa-calendar pb-4" style="font-size:34pt;"></i>
+                </div>
+                <!--/Card image-->
+
+                <!--Card content-->
+                <div class="card-body text-center" style="height: 215px;">
+                    <!--Title-->
+                    <h4 class="card-title"
+                        style="color: whitesmoke;"><strong>Make Booking</strong></h4>
+                    <p class="card-text pl-4 pb-4 pr-4" style="color: gainsboro; font-size: 13pt;">Make a booking with the therapist you choose and get an appointment
+                        confirmation within 48 hours. </p>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card Narrower-->
+        </div>
+    </div>
+
+    <div id="howitstarted" class="row mt-4 pt-4">
+        <div class="col-12 pb-4" style="padding-left: 5rem; padding-right:5rem;">
+            <h1 class="h1 font-weight-bold text-center mb-5 pt-4" style="color:white;">Why Should I Use This
+                Platform?</h1>
+            <hr/>
+            <p class="how-started-para pl-4 pr-4 pb-4" style="font-size: 16pt; color:#e1e1e1;">
+                You or a loved one are considering mental health support and taking a step in talking to someone. Finding <span style="color:white;">the best help</span> specific to you and your background should be <span style="color:white;">stress-free</span>. Factors like income, gender, religious preference and severity are proven to be relevant in finding the best match. By asking you a few researched questions, we use Artificial Intelligence in our matching to find and book you with the <span style="color:white;">best therapist for your needs and budget</span>. We also list the free counseling programs available in your area and display their wait times so you know where to go.
+
+	
+            </p>
+			
+            <p class="how-started-para pl-4 pr-4 pb-4" style="font-size: 16pt; color:#e1e1e1;">    
+                Whether you're in a tough place or just want someone to talk to, <span style="color:white;">we're here</span> to connect you with in-person therapy that you can feel comfortable with and afford.
+            </p>
+           
+        </div>
+    </div>
+
+    <div id="ourresources" class="row mt-4 pt-4" style="background-color: whitesmoke;">
+        <div class="col-12 pb-4" style="padding-left: 5rem; padding-right:5rem;">
+            <!--Section heading-->
+            <h1 class="h1 font-weight-bold text-center mb-5 pt-4">Resources and Blogs</h1>
+            <hr style="border-color:black; color:black; background-color: black;"/>
+            <!--Section description-->
+            <p class="text-center mb-3 pb-3"></p>
+
+            <!-- Card deck -->
+            <div class="card-deck">
+
+                <!-- Card -->
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay" onclick="window.location='https://www.theplayerstribune.com/en-us/articles/kevin-love-everyone-is-going-through-something'">
+                        <img class="card-img-top" src="img/Kevin.JPG" alt="Card image cap" style="height: 200px; object-fit: cover;">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body mb-4">
+                        <!--Title-->
+                        <h4 class="card-title">Kevin Love: Everyone Is Going Through Something</h4>
+                        <!--Text-->
+                        <p class="card-text pb-4">On November 5th, right after halftime against the Hawks, I had a panic
+                            attack.
+
+                            It came out of nowhere. I’d never had one before. I didn’t even know if they were real. But
+                            it was real — as real as a broken hand or a sprained ankle. Since that day, almost
+                            everything about the way I think about my mental health has changed.</p>
+                        <button type="button"
+                                onclick="window.location='https://www.theplayerstribune.com/en-us/articles/kevin-love-everyone-is-going-through-something'"
+                                class="btn btn-md customyellow" style="margin-top: 2rem; bottom: 0; position: absolute;">Read more
+                        </button>
+                    </div>
+
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4">
+                    <!--Card image-->
+                    <div class="view overlay" onclick="window.location='http://www.businessinsider.com/jay-z-therapy-gave-him-huge-advantage-everyday-life-2017-11'">
+                        <img class="card-img-top" src="img/Jay.jpeg" alt="Card image cap" style="height: 200px; object-fit: cover;">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card content-->
+                    <div class="card-body mb-4">
+
+                        <!--Title-->
+                        <h4 class="card-title">Jay-Z: Therapy gave me a huge advantage in everyday life</h4>
+                        <!--Text-->
+                        <p class="card-text pb-4">Rapper Jay-Z says he's gone to therapy and benefitted from the process.
+                            In an interview with New York Times executive editor Dean Baquet, Jay-Z said he "grew so
+                            much from the experience."
+                            He went on: "The most important thing I got is that everything is connected.” </p>
+                        <button type="button"
+                                onclick="window.location='http://www.businessinsider.com/jay-z-therapy-gave-him-huge-advantage-everyday-life-2017-11'"
+                                class="btn btn-md customyellow" style="margin-top: 2rem; bottom: 0; position: absolute;">Read more
+                        </button>
+                        
+                    </div>
+
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay" onclick="window.location='http://q-ed.org/qed-projects/womens-wellness-program/'">
+                        <img class="card-img-top" src="img/Wellness.jpg" alt="Card image cap" style="height: 200px; object-fit: cover;">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body mb-4">
+
+                        <!--Title-->
+                        <h4 class="card-title">Women’s Wellness Program</h4>
+                        <!--Text-->
+                        <p class="card-text pb-4">The Women’s Wellness Program is culturally customized and accessible
+                            program for Arabic-speaking refugee women in Canada. Its goal is to enhance newcomer
+                            well-being, dignity and social connections and to better meet the unique needs of vulnerable
+                            clients and communities.</p>
+                        <button type="button"
+                                onclick="window.location='http://q-ed.org/qed-projects/womens-wellness-program/'"
+                                class="btn btn-md customyellow" style="bottom: 0; position: absolute;">Read more
+                        </button>
+                    </div>
+                </div>
+                <!-- Card -->
+            </div>
+            <!-- Card deck -->
+        </div>
+    </div>
+
+    <div id="ourtherapists" class="row mt-4 pt-4">
+        <div class="col-12 pb-4" style="padding-left: 5rem; padding-right:5rem;">
+
+            <!--Section heading-->
+            <h1 class="h1 font-weight-bold text-center pt-4" style="color:white;">A Couple of Our Therapists</h1>
+            <hr/>
+            <!--Section description-->
+            <p class="text-center how-started-para" style="font-size: 20px; color:whitesmoke">We choose the
+                therapists we work with carefully, bringing you only the best professionals in the field.</p>
+
+             <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+  
+            <!--Controls-->
+            <div class="controls-top">
+                <button class="btn btn-small btn-outline-elegant pull-left" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i> PREV</button>
+                <button class="btn btn-small btn-outline-elegant pull-right" href="#multi-item-example" data-slide="next">NEXT <i class="fa fa-chevron-right"></i></button>
+            </div>
+            <!--/.Controls-->
+
+            <!--Indicators-->
+            <ol class="carousel-indicators" style="bottom:-50px;">
+                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                <li data-target="#multi-item-example" data-slide-to="1"></li>
+                <!--<li data-target="#multi-item-example" data-slide-to="2"></li>-->
+            </ol>
+            <!--/.Indicators-->
+
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox" style="margin-bottom:50px;">
+
+            <!--First slide-->
+            <div class="carousel-item active">
+
+                <!--Grid row-->
+            <div class="row justify-content-center ">
+                <!-- Grid column -->
+                <div class="col-md-4 col-sm-12 testimonial">
+                    <!--Card Regular-->
+                    <div class="card card-cascade">
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="testimonialpic" src="img/Nelson.JPG" class="img-fluid" alt="normal"> 
+                            <a> 
+                                <div class="mask rgba-white-slight"></div> 
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title"><strong>Dr. Nelson Byrne</strong></h4>
+                            <p class="card-text text-left">As a psychologist, I have over 15 years experience providing
+                                psychotherapy for adults with depression, anxiety, insomnia, or managing conditions such
+                                as cancer.
+                            </p>
+                        </div>
+                        <!--/.Card content-->
+                    </div>
+                    <!--/.Card Regular-->
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-sm-12 testimonial">
+
+                        <!--Card Regular-->
+                        <div class="card card-cascade">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                  <img class="testimonialpic" src="images/Karlene.png" class="img-fluid" alt="therapist image"> 
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--/.Card image-->
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Title-->
+                                <h4 class="card-title"><strong>Karlene Grant</strong></h4>
+    
+                                <p class="card-text text-left">Karlene Grant has been working as a social worker/therapist for
+                                    approximately 22 years for individuals and families dealing with anxiety, depression,
+                                    and relationship issues.
+                                </p>
+                            </div>
+                            <!--/.Card content-->
+    
+                        </div>
+                        <!--/.Card Regular-->
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                <div class="col-md-4 col-sm-12 testimonial">
+
+                        <!--Card Regular-->
+                        <div class="card card-cascade">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                  <img class="testimonialpic" src="images/Ambreen.jpg" class="img-fluid" alt="therapist image"> 
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--/.Card image-->
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Title-->
+                                <h4 class="card-title"><strong>Ambreen Yousaf</strong></h4>
+    
+                                <p class="card-text text-left">Ambreen conveys a genuine helping nature that will allow you to 
+                                    feel comfortable making positive life changes. Her clients will experience a safe space and 
+                                    an open and empathetic relationship built around trust.
+                                </p>
+                            </div>
+                            <!--/.Card content-->
+    
+                        </div>
+                        <!--/.Card Regular-->
+                    </div>
+                    <!-- Grid column -->
+                    </div>
+                    <!--/.Grid row-->
+
+                <!--/.First Slide-->
+            </div>
+            <!--Second slide-->
+            <div class="carousel-item">
+
+            <!--Grid row-->
+            <div class="row justify-content-center ">
+                <!-- Grid column -->
+                <div class="col-md-4 col-sm-12 testimonial">
+
+                    <!--Card Regular-->
+                    <div class="card card-cascade">
+                        <!--Card image-->
+                        <div class="view overlay">
+                              <img class="testimonialpic" src="images/Corine.jpg" class="img-fluid" alt="therapist image"> 
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title"><strong>Corine Mollins</strong></h4>
+
+                            <p class="card-text text-left">Dr.Corine has 10 years experience providing both direct clinical care to clients 
+                                as well as holding supervisory and management roles in clinical settings. </p>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card Regular-->
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-sm-12 testimonial">
+
+                    <!--Card Regular-->
+                    <div class="card card-cascade">
+                        <!--Card image-->
+                        <div class="view overlay">
+                              <img class="testimonialpic" src="images/Sarah.jpg" class="img-fluid" alt="therapist image"> 
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title"><strong>Sarah Ahmed</strong></h4>
+
+                            <p class="card-text text-left">Sarah works as a therapist at Center for Addiction and Mental Health
+                                 (CAMH). She also holds the position of an adjunct lecturer for Factor-Inwentash Faculty of Social 
+                                 Work at University of Toronto.</p>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card Regular-->
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-sm-12 testimonial">
+
+                        <!--Card Regular-->
+                        <div class="card card-cascade">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                  <img class="testimonialpic" src="images/Mel.jpg" class="img-fluid" alt="therapist image"> 
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--/.Card image-->
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Title-->
+                                <h4 class="card-title"><strong>Mel Frederick</strong></h4>
+    
+                                <p class="card-text text-left">Honours Bachelor of Arts in Sexual Diversity Studies and Women and 
+                                    Gender Studies in 2015 from the University of Toronto and a Master of Social Work specializing in 
+                                    Social Justice and Diversity</p>
+                            </div>
+                            <!--/.Card content-->
+    
+                        </div>
+                        <!--/.Card Regular-->
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!--/.Grid row-->
+            </div>
+            <!--/.Second slide-->
+
+        </div>
+        </div>
+        </div>
+    </div>
+
+    
+    <div class="">
+        <div class="row"
+             style="background: url(img/therapistoffice.jpg) no-repeat center center; color: white; background-size: 100%">
+            <div class="col justify-md-center text-white rgba-black-strong" style="padding: 2rem;">
+                <div class="col-12 text-center">
+                    <h2>Are you a Therapist?</h2>
+                    <p>Grow your practice and join our community.</p>
+                    <button type="button" class="btn btn-md customyellow" onclick="window.location='therapist_questionnaire.html'"><a href="therapist_questionnaire.html">Learn More</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer row font-small pt-4" style="color: #9da3b3; ">
+
+        <!--Footer Links-->
+        <div class="col-12 text-center text-md-left" style="background-color: white;">
+            <div class="row justify-content-center" href="#">
+                <div class="col text-center pb-4">
+                    <h1 class="h1 font-weight-bold text-center pt-4" style="color: black;padding-bottom: 15px;">Our Partners</h1>
+                    <img src="images/partners.svg" class="column" style="padding-top: 30px;" alt="communitech partnership with linkmentalhealth">
+                    <img src="images/Vaughan.jpg" class="column" style="width: 300px;" alt="Vaughan partnership with linkmentalhealth">
+                    <img src="images/RIC.jpg" style="width: 226px;" alt="RIC partnership with linkmentalhealth">
+                    <img src="images/rising-youth.png" style="width: 700px;max-width:100%;" alt="Rising Youth partnership with linkmentalhealth">
+                </div>
+
+            </div>
+
+            <div class="row footer">
+
+                <!--First column-->
+                <div class="about col-md-6" style="padding-left: 5rem;">
+                    <h6 class="text-uppercase" style="color: black;">ABOUT US</h6>
+                    <p><strong>LinkMe</strong>ntalHeath was co-founded by two brothers who are motivated by the challenges of finding help. Our platform connects people to in-person therapy services regardless of their budget. We have a vision to make mental health support accessible to everyone who needs or wants it. We are starting with the 4.75 million Canadians who are struggling with a mental health condition but not getting the help they need. We are now launched in Mississauga and Toronto!. </p>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-3 footer-col-1">
+                    <!--<h5 class="text-uppercase">NEED MORE HELP?</h5>-->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="contact-us.html">CONTACT US</a>
+                        </li>
+                        <li>
+                            <a href="careers.html">CAREERS</a>
+                        </li>
+                        <li>
+                            <a href="become-a-partner.html">BECOME A PARTNER</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <!--Third column-->
+                <div class="col-md-3 footer-col-2">
+                    <!--<h5 class="text-uppercase">NEED MORE HELP?</h5>-->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="terms-clients.html">TERMS FOR CLIENTS</a>
+                        </li>
+                        <li>
+                            <a href="terms-therapists.html">TERMS FOR THERAPISTS</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">PRIVACY</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Third column-->
+            </div>
+        </div>
+        <!--/.Footer Links-->
+        <div class="col-12 text-center pt-4 pb-4">
+            <a class="btn btn-sm btn-outline-elegant"><i class="fa fa-4x fa-instagram"></i></a>
+            <a class="btn btn-sm btn-outline-elegant" href="https://twitter.com/linkmenthealth"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-sm btn-outline-elegant" href="https://www.linkedin.com/company/linkmentalhealth/"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <!--Copyright-->
+        <div class="col-12 footer-copyright py-3 text-center">
+            © {{ new Date().getFullYear() }} Copyright:
+            <a href="home.html"> LinkMentalHealth </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+</div>
+<!-- /container -->
+
+
+<!-- SCRIPTS -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<!-- To Generate Current Year in Footer -->
+<script>
+    new Vue({
+        el: '.footer-copyright',
+    });
+</script>
+
+<!-- Validation -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+    
+        <!-- Google Maps Address Autocomplete-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA99KkLe7GZtYGJZcX-RQHJA_G-Q9jwU9Q&libraries=places&callback=initialize"
+    type="text/javascript"></script>
+    
+    <script async defer>
+        function initialize() {
+            var input = document.getElementById('locationTextField');
+/*            var defaultBounds = new google.maps.LatLngBounds(
+                new google.maps.LatLng(44.0126, -78.9716),
+                new google.maps.LatLng(43.3342, -79.9327)
+            );*/
+            
+            var options = {
+            /*  bounds: defaultBounds,*/
+                componentRestrictions: {country: 'ca'}
+            };
+            
+            var autocomplete = new google.maps.places.Autocomplete(input, options);
+            
+            $(input).on('input',function(){
+	           var str = input.value;
+               var prefix = 'Ontario, ';
+                if(str.indexOf(prefix) == 0) {
+                    console.log(input.value);
+                } else {
+                    if (prefix.indexOf(str) >= 0) {
+                    input.value = prefix;
+                } else {
+                    input.value = prefix+str;
+               }
+                }
+            });
+        }
+        document.getElementById("body").addEventListener("load", initialize);
+    </script>
+    <script>
+    // Use browser detect location feature
+      function geolocate() {
+        var geocoder = new google.maps.Geocoder;
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            geocoder.geocode({'location': geolocation}, function(results, status) {
+                if (status === 'OK') {
+                    if (results[0]) {
+                        $('#locationTextField').val('Ontario, '+results[0].address_components[6].long_name);
+                    } else {
+                    window.alert('No results found');
+                }
+                } else {
+                    window.alert('Geocoder failed due to: ' + status);
+                }
+            });
+          });
+         
+        }
+      }
+        
+    </script>
+    
+        <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MF7334J');</script>
+    <!-- End Google Tag Manager -->
+
+</body>
+
+</html>

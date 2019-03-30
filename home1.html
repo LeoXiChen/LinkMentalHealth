@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MF7334J');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LinkMentalHealth</title>
+    <!-- SEO Tags-->
+    <meta name="description" content="LinkMentalHealth - Toronto, Ontario">
+    <meta name="keywords" content="Mental,Health,Wellness,Therapy,Therapists,Booking,Toronto,Mississauga,GTA,Services">
+    <meta name="author" content="LinkMentalHealth">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/popupcampaign.css" rel="stylesheet">
+
+</head>
+
+<body id="body">
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="top" class="homepage-hero-module"
+        title="LinkMentalHealth"
+        
+    >
+        <div class="video-container">
+            <div class="title-container">
+                <div class="headline">
+                    <h3 class="h3-title w3-animate-opacity">Get Started: Enter Your Location Below <br/>Match &amp; Book an Appointment With The Right Therapist No Matter Your Budget &amp; Needs</h3>
+                </div>
+                <div class="row d-flex align-content-center justify-content-center">
+                    <div class="col-md-6">
+                        <form id="location-form" method="GET" action="questionnaire.html" class="needs-validation" onsubmit="return saveLocation()";
+                        novalidate>
+                        <div class="address-input-unit col">
+                            <i class="map-icon fa fa-map-marker"></i>
+                            <!-- add onFocus="geolocate()" to input tag to allow computer to detect location -->
+                            <input type="text" class="form-control input-lg" id="locationTextField"
+                                    placeholder="Enter Address or Postal Code" required>
+                            <input type="hidden" id="mylocation" name="mylocation" value="0"/>
+                            <div class="invalid-feedback alert alert-danger" role="alert">
+                                Please provide a valid address.
+                            </div>
+                            <button type="submit" class="btn" id="start-qs-btn">Find a Therapist!</button>
+                        </div>
+                        <h6 id ="inputError"></h6>
+                        </form>
+                        <script>
+                            function saveLocation() {
+                                var location = document.getElementById("location-form").elements[0].value;
+                                let validInput;
+                                document.getElementById("mylocation").value = location;
+                                const latitudeJson = `https://maps.googleapis.com/maps/api/geocode/json?address=${location.split(' ').join('+')}&key=AIzaSyA99KkLe7GZtYGJZcX-RQHJA_G-Q9jwU9Q`  
+
+                                $.ajax({
+                                    url: latitudeJson,
+                                    dataType: 'json',
+                                    contentType: 'text/plain',
+                                    async: false,
+                                    timout: 30000,
+                                    success: function (r) {
+                                        if (r.status === 'ZERO_RESULTS'){
+                                            document.querySelector('#inputError').textContent = "Please try entering your address or zip again!"; 
+                                            return validInput = false;
+                                        }
+                                        else {
+                                            return validInput = true;
+                                        }                            
+                                    },
+                                    error: function (e) {
+                                        console.log("ADFADS" + e)
+                                        document.querySelector('#inputError').textContent = "Please try entering your address or zip again!"; 
+                                        debugger;
+                                        return validInput = false;
+                                    }                    
+                                }) 
+                                return validInput;
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="filter"></div>
+            <img id="hero-img" src="img/background.png" alt="linkmentalhealth still background for mobiles"/>
+            <video id="video" muted autoplay loop class="fillWidth">
+                <source src="opening-video.mov" type="video/mp4">
+                Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+        </div>
+    </div>
+<!-- SCRIPTS -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<!-- Validation -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+<!-- Google Maps Address Autocomplete-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj_IpEA7qaOD1njrmlKx5fpwGzc-81DG0&libraries=places&callback=initialize"
+    type="text/javascript"></script>
+
+    <script async defer>
+        function initialize() {
+            var input = document.getElementById('locationTextField');
+
+            var options = {
+                componentRestrictions: {country: 'ca'}
+            };
+
+            var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+        }
+        document.getElementById("body").addEventListener("load", initialize);
+    </script>
+
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    <script>
+    /**
+    * Function that tracks a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
+    </script>
+
+</body>
+
+</html>
