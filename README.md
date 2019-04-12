@@ -23,7 +23,7 @@ Go to [http://localhost:8080](http://localhost:8080) to access the main website 
 You can make changes locally (to both backend and frontend), but you'll need to restart the server. Kill the server by pressing `Control+C` on the keyboard (while the terminal window with the server running is in focus) and repeating just Step 5 above. You could also easily close the terminal window and repeat steps 3 - 6.
 
 
-# User & Therapist Matching Algorithm (Tutorial)
+# User & Therapist Matching Algorithm 
 
 ## results.html (Client)
 
